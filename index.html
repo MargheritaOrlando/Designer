@@ -1,61 +1,107 @@
+Hina~Marghe, [27/03/2025 20:24]
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margherita Orlando - Quest Designer</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+        }
+        .hero-image {
+            background-image: url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans">
+    <div class="container mx-auto px-4">
+        <header class="text-center py-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Margherita Orlando</h1>
+            <h2 class="text-xl text-gray-600">Quest Designer</h2>
+        </header>
 
-    <header>
-        <h1>Margherita Orlando</h1>
-        <p>Quest Designer | Narrative & Level Design</p>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <section class="mb-12">
+            <div class="hero-image rounded-lg shadow-lg mb-6"></div>
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">TERMINATOR: SURVIVORS</h3>
+                <p class="text-gray-700">
+                    Currently working as Quest Designer within the Narrative Team at Nacon Studio Milan. 
+                    Crafting immersive narrative experiences and dynamic quest structures for this groundbreaking survival game.
+                </p>
+            </div>
+        </section>
 
-    <section id="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h2>Creating Immersive Stories & Engaging Quests</h2>
-            <p>Passionate about designing interactive narratives that captivate players.</p>
-        </div>
-    </section>
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Award-Winning Projects</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">REYA'S LIGHT</h3>
+                    <p class="text-gray-700 mb-4">2D Online, multiplayer, shooter, platform game</p>
+                    <div class="bg-gray-200 p-4 rounded">
+                        <p class="font-medium">Third place at New Game Designer, Milano - 2022</p>
+                        <p class="text-sm text-gray-600">Role: Game Designer & 2D Artist</p>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">SWEET HOME OF MINE</h3>
+                    <p class="text-gray-700 mb-4">2D strategic game</p>
+                    <div class="bg-gray-200 p-4 rounded">
+                        <p class="font-medium">Global Game Jam, Cosenza – 2019</p>
+                        <p class="text-sm text-gray-600">Awards:
+                            <br>- Best Overall
+                            <br>- Best Game Design
+                            <br>- Best Thematic Use
+                            <br>- Best Audio
+                            <br>- Best Visuals
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am a Quest Designer with a deep passion for video games and storytelling. 
-        My expertise lies in designing compelling quests, immersive worlds, and engaging gameplay experiences.</p>
-    </section>
+        <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Skills</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Game Engines</h3>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Unreal Engine 5</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Programming</h3>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Java</li>
+                        <li>C#</li>
+                        <li>C++</li>
+                        <li>Python</li>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="terminator.jpg" alt="Terminator: Survivors">
-            <h3>Terminator: Survivors</h3>
-            <p>Worked on quest and level design for this post-apocalyptic survival game.</p>
-        </div>
-        <div class="project">
-            <h3>Reya's Light</h3>
-            <p>2D online multiplayer hero-shooter platform game.</p>
-        </div>
-        <div class="project">
-            <h3>Felux</h3>
-            <p>Physics-based 3D puzzle game.</p>
-        </div>
-    </section>
+Hina~Marghe, [27/03/2025 20:24]
+</ul>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Design Tools</h3>
+                    <ul class="list-disc pl-5 text-gray-700">
+                        <li>Photoshop</li>
+                        <li>Blender</li>
+                        <li>Miro</li>
+                        <li>Draw.io</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:m.orlando96@hotmail.com">m.orlando96@hotmail.com</a></p>
-        <p>Phone: +39 3347972827</p>
-    </section>
-
+        <footer class="text-center py-12 mt-6 border-t">
+            <p class="text-gray-600">
+                Contact: m.orlando96@hotmail.com | +39 3347972827
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
