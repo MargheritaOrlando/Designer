@@ -153,16 +153,6 @@
         .project-card:hover {
             border-left: 4px solid var(--primary);
         }
-
-        .text-stroke-combined {
-            color: white;
-            -webkit-text-stroke: 1px black;
-            text-shadow: 
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-        }
     </style>
 </head>
 <body class="font-sans">
@@ -193,32 +183,36 @@
         </div>
     </nav>
 
-    <!-- Header / Hero Section -->
-    <header class="pt-24 pb-12 text-white relative grid place-items-center" style="min-height: 600px;">
-        <!-- Background image with overlay -->
-        <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
-        <div class="absolute inset-0 z-0">
-            <img src="t-800.jpg" alt="Terminator Background" class="w-full h-full object-cover object-top">
-        </div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="text-center">
-                <h1 class="text-5xl font-bold mb-2 title-with-outline">Margherita Orlando</h1>
-                <h2 class="text-2xl text-purple-200 mb-6 text-with-outline">Quest Designer</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto text-with-outline">
-                    Currently working as Quest Designer within the Narrative Team at Nacon Studio Milan on TERMINATOR: SURVIVORS
-                </p>
-                <div class="flex flex-wrap justify-center">
-                    <span class="badge bg-purple-800 mr-2 mb-2">Quest Design</span>
-                    <span class="badge bg-purple-800 mr-2 mb-2">Narrative Design</span>
-                    <span class="badge bg-purple-800 mr-2 mb-2">Game Systems</span>
-                    <span class="badge bg-purple-800 mr-2 mb-2">Level Design</span>
-                    <span class="badge bg-purple-800 mr-2 mb-2">Unreal Engine 5</span>
-                    <span class="badge bg-purple-800 mr-2 mb-2">Unity</span>
-                </div>
-            </div>
-        </div>
-    </header>
+  <!-- Header con testo bordato usando stili inline -->
+<header class="pt-24 pb-12 text-white relative flex items-center justify-center" style="min-height: 600px;">
+  <!-- Background image with overlay -->
+  <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+  <div class="absolute inset-0 z-0">
+    <img src="t-800.jpg" alt="Terminator Background" class="w-full h-full object-cover object-top">
+  </div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mb-2" style="color: white; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
+        Margherita Orlando
+      </h1>
+      <h2 class="text-2xl mb-6" style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+        Quest Designer
+      </h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto" style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+        Currently working as Quest Designer within the Narrative Team at Nacon Studio Milan on TERMINATOR: SURVIVORS
+      </p>
+      <div class="flex flex-wrap justify-center">
+        <span class="badge bg-purple-800 mr-2 mb-2">Quest Design</span>
+        <span class="badge bg-purple-800 mr-2 mb-2">Narrative Design</span>
+        <span class="badge bg-purple-800 mr-2 mb-2">Game Systems</span>
+        <span class="badge bg-purple-800 mr-2 mb-2">Level Design</span>
+        <span class="badge bg-purple-800 mr-2 mb-2">Unreal Engine 5</span>
+        <span class="badge bg-purple-800 mr-2 mb-2">Unity</span>
+      </div>
+    </div>
+  </div>
+</header>
 
     <!-- About Section -->
     <section id="about" class="py-16">
