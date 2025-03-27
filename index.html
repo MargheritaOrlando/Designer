@@ -21,7 +21,23 @@
             color: var(--text-dark);
             scroll-behavior: smooth;
         }
-        
+            /* Stile personalizzato per i badge ambra con testo bianco bordato di nero */
+        .badge.amber-custom {
+            background-color: #b45309; /* Ambra medio-scuro (tra amber-700 e amber-800) */
+            color: white; /* Testo bianco */
+            font-weight: 500; /* Semi-bold per migliorare la leggibilità */
+            border: 1px solid #000000; /* Bordo nero */
+            text-shadow: 
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000; /* Contorno nero attorno al testo */
+            border-radius: 20px;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.75rem;
+            display: inline-block;
+            margin: 0.25rem;
+        }
         .hero-image {
             background-image: url('t-800.jpg');
             background-size: cover;
@@ -203,12 +219,9 @@
         Currently working as Quest Designer within the Narrative Team at Nacon Studio Milan on TERMINATOR: SURVIVORS
       </p>
       <div class="flex flex-wrap justify-center">
-        <span class="badge bg-purple-800 mr-2 mb-2">Quest Design</span>
-        <span class="badge bg-purple-800 mr-2 mb-2">Narrative Design</span>
-        <span class="badge bg-purple-800 mr-2 mb-2">Game Systems</span>
-        <span class="badge bg-purple-800 mr-2 mb-2">Level Design</span>
-        <span class="badge bg-purple-800 mr-2 mb-2">Unreal Engine 5</span>
-        <span class="badge bg-purple-800 mr-2 mb-2">Unity</span>
+        <span class="badge amber-custom mr-2 mb-2">Quest Designer</span>
+        <span class="badge amber-custom mr-2 mb-2">Game Designer</span>
+        <span class="badge amber-custom mr-2 mb-2">Gameplay Designer</span>
       </div>
     </div>
   </div>
