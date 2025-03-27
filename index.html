@@ -1,433 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Margherita Orlando - Quest Designer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Raleway:wght@300;400;500;700&display=swap');
-    
-    :root {
-      --primary-color: #5b3cc4;
-      --secondary-color: #7a4ef5;
-      --dark-color: #1a1a2e;
-      --light-color: #e6e6ff;
-      --accent-color: #9370DB;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Raleway', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f5f5f5;
-    }
-    
-    header {
-      background: linear-gradient(rgba(27, 20, 41, 0.7), rgba(27, 20, 41, 0.7)), 
-                  url('https://imagedelivery.net/9sCnq8t6WEGNay0RAQNdvQ/UUID-cl9vvchg01nl9c8yvs13mcwmw/cthulo') no-repeat center center/cover;
-      height: 100vh;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem;
-    }
-    
-    .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: white;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-    
-    .nav-links a:hover {
-      background-color: var(--accent-color);
-    }
-    
-    .hero {
-      text-align: center;
-      padding: 0 2rem;
-      margin-bottom: 8rem;
-    }
-    
-    .hero h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-    }
-    
-    .hero h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      color: var(--accent-color);
-    }
-    
-    .hero p {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      font-size: 1.2rem;
-    }
-    
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .social-links a {
-      color: white;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-    
-    .social-links a:hover {
-      color: var(--accent-color);
-    }
-    
-    .section-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
-      text-align: center;
-      margin: 4rem 0 2rem;
-      position: relative;
-      color: var(--dark-color);
-    }
-    
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 100px;
-      height: 4px;
-      background: var(--accent-color);
-      margin: 0.5rem auto;
-    }
-    
-    .projects {
-      background-color: white;
-      padding: 4rem 0;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    
-    .project-card {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    .project-info {
-      padding: 1.5rem;
-    }
-    
-    .project-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary-color);
-    }
-    
-    .project-desc {
-      margin-bottom: 1rem;
-      color: #555;
-    }
-    
-    .project-skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-    
-    .skill-tag {
-      background-color: var(--light-color);
-      color: var(--primary-color);
-      padding: 0.3rem 0.8rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-    
-    .awards {
-      padding: 4rem 0;
-      background-color: var(--light-color);
-    }
-    
-    .awards-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    
-    .award-item {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    
-    .award-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    
-    .award-subtitle {
-      font-weight: 500;
-      margin-bottom: 1rem;
-      color: #555;
-    }
-    
-    .award-list {
-      list-style-type: none;
-      margin-top: 1rem;
-    }
-    
-    .award-list li {
-      margin-bottom: 0.5rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    .award-list li::before {
-      content: '•';
-      color: var(--accent-color);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-    
-    .about {
-      padding: 4rem 0;
-    }
-    
-    .about-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    
-    .about-text {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    
-    .qr-container {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    
-    .qr-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.5rem;
-      color: var(--dark-color);
-      margin-bottom: 1rem;
-    }
-    
-    footer {
-      background-color: var(--dark-color);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    .footer-links a:hover {
-      color: var(--accent-color);
-    }
-    
-    .logo-img {
-      width: 150px;
-      height: auto;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background-color: var(--secondary-color);
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .nav-links {
-        display: none;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margherita Orlando - Quest Designer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">MARGHERITA ORLANDO</div>
-      <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#about">About Me</a>
-        <a href="#" class="btn">Resume</a>
-      </div>
-    </nav>
-    
-    <div class="hero">
-      <h1>MARGHERITA ORLANDO</h1>
-      <h2>QUEST DESIGNER</h2>
-      <p>Hello! My name is Margherita and I am currently working as a Quest Designer at Terminator: Survivors. I have a passion for creating immersive game experiences through thoughtful quest and level design.</p>
-      <div class="social-links">
-        <a href="#"><i class="fas fa-envelope"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </header>
 
-  <section id="projects" class="projects">
-    <h2 class="section-title">PROJECTS</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">ARTIFICIAL - PROXY BAR</h3>
-          <p class="project-desc">A single-player online investigative 3D game where every NPC is powered by advanced AI, allowing them to respond dynamically to any question from the player. Interactions can be carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.</p>
-          <div class="project-skills">
-            <span class="skill-tag">Game design and implementation</span>
-            <span class="skill-tag">Level design</span>
-            <span class="skill-tag">Gameplay design</span>
-            <span class="skill-tag">Narrative and character design</span>
-            <span class="skill-tag">Sound design</span>
-            <span class="skill-tag">3D modeling</span>
-          </div>
+    <header>
+        <h1>Margherita Orlando</h1>
+        <p>Quest Designer | Narrative & Level Design</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#projects">Progetti</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>Chi Sono</h2>
+        <p>Sono una Quest Designer appassionata di videogiochi e narrazione. Amo creare storie immersive, progettare missioni coinvolgenti e collaborare con team per dare vita a esperienze memorabili.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Progetti</h2>
+        <div class="project">
+            <h3>Reya's Light</h3>
+            <p>2D online multiplayer hero-shooter platform game.</p>
         </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">REYA'S LIGHT</h3>
-          <p class="project-desc">A 2D online multiplayer hero-shooter platform game.</p>
-          <div class="project-skills">
-            <span class="skill-tag">Game design</span>
-            <span class="skill-tag">Level design</span>
-            <span class="skill-tag">Characters design</span>
-            <span class="skill-tag">Technical design</span>
-            <span class="skill-tag">2D sprite and animation creation</span>
-          </div>
+        <div class="project">
+            <h3>Felux</h3>
+            <p>Gioco puzzle basato sulla fisica in 3D.</p>
         </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">FELUX</h3>
-          <p class="project-desc">A 3D physics-based puzzle game.</p>
-          <div class="project-skills">
-            <span class="skill-tag">Game design</span>
-            <span class="skill-tag">Level design</span>
-            <span class="skill-tag">Gameplay design</span>
-            <span class="skill-tag">Narrative design</span>
-            <span class="skill-tag">Physical prototype creation</span>
-          </div>
+        <div class="project">
+            <h3>Noisy Mall</h3>
+            <p>Gioco stealth 3D basato sulle interazioni sonore.</p>
         </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">NOISY MALL</h3>
-          <p class="project-desc">A 3D stealth game focused on sound-based interactions.</p>
-          <div class="project-skills">
-            <span class="skill-tag">Game design</span>
-            <span class="skill-tag">Level design</span>
-            <span class="skill-tag">Sound design</span>
-            <span class="skill-tag">Spatial audio management</span>
-            <span class="skill-tag">3D modeling</span>
-          </div>
+        <div class="project">
+            <h3>Procedural Home Generator</h3>
+            <p>Progetto di IA per la generazione procedurale di case.</p>
         </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">PROCEDURAL HOME GENERATOR</h3>
-          <p class="project-desc">An artificial intelligence project for the procedural generation of houses, enabling the automatic creation of unique building designs.</p>
-        </div>
-      </div>
-      
-      <div class="project-card">
-        <div class="project-info">
-          <h3 class="project-title">THE DARK LADY AWAKENS</h3>
-          <p class="project-desc">3D single-player, third-person role-playing game design, inspired by the Harry Potter universe. The concept features a story-driven experience set in an open-world map, with a strong
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:m.orlando96@hotmail.com">m.orlando96@hotmail.com</a></p>
+        <p>Telefono: +39 3347972827</p>
+    </section>
+
+</body>
+</html>
