@@ -16,9 +16,9 @@
         }
         
         body {
-            background-color: #FFFFFF;
+            background-color: #0a1622;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-dark);
+            color: #f3f4f6; /*var(--text-dark);*/
             scroll-behavior: smooth;
         }
             /* Stile personalizzato per i badge ambra con testo bianco bordato di nero */
@@ -38,6 +38,51 @@
             display: inline-block;
             margin: 0.25rem;
         }
+    
+            /* Bordi blu scuro per i testi con ombra */
+        h1, h2, h3, h4, h5, h6, p, li, span:not(.badge) {
+            text-shadow: 
+                -1px -1px 0 #0a1622,
+                1px -1px 0 #0a1622,
+                -1px 1px 0 #0a1622,
+                1px 1px 0 #0a1622;
+        }
+        
+        /* Bordi blu scuro per i titoli principali (più spessi) */
+        h1.text-5xl, h2.text-3xl, .section-heading {
+            text-shadow: 
+                -2px -2px 0 #0a1622,
+                2px -2px 0 #0a1622,
+                -2px 2px 0 #0a1622,
+                2px 2px 0 #0a1622;
+        }
+        
+        /* Bordi blu scuro per i container e card */
+        .bg-white, .card, .project-card, .shadow-lg, .rounded-lg {
+            border: 1px solid #0a1622;
+            box-shadow: 0 4px 6px rgba(10, 22, 34, 0.5);
+        }
+        
+        /* Bordi blu scuro per i badge (mantenendo quelli neri attuali) */
+        .badge.amber-custom {
+            border: 1px solid #0a1622;
+            text-shadow: 
+                -1px -1px 0 #0a1622,
+                1px -1px 0 #0a1622,
+                -1px 1px 0 #0a1622,
+                1px 1px 0 #0a1622;
+        }
+        
+        /* Bordi blu scuro per i link nella navigazione */
+        .nav-link:after {
+            background-color: #0a1622;
+        }
+        
+        /* Bordi blu scuro per i pulsanti e altri elementi interattivi */
+        button, .btn-primary {
+            border: 1px solid #0a1622;
+            box-shadow: 0 2px 4px rgba(10, 22, 34, 0.5);
+        }
         .hero-image {
             background-image: url('t-800.jpg');
             background-size: cover;
@@ -47,7 +92,7 @@
         
         .nav-link {
             position: relative;
-            color: var(--text-dark);
+            color: #f3f4f6;
             font-weight: 500;
             transition: all 0.3s ease;
         }
@@ -66,11 +111,48 @@
         .nav-link:hover:after {
             width: 100%;
         }
-        
-        .nav-link:hover {
-            color: var(--primary-dark);
+        #about, #projects, #skills {
+        background-color: #0a1622; /* Blu scuro principale */
         }
-        
+    
+        #experience, #awards {
+            background-color: #05101a; /* Leggermente più scuro per contrasto */
+        }
+    
+        /* Titoli delle sezioni */
+        .section-heading {
+            color: #f3f4f6;
+        }
+    
+        /* Card e contenitori */
+        .bg-white {
+            background-color: #0f2231; /* Blu scuro leggermente più chiaro */
+            color: #f3f4f6;
+        }
+    
+        /* Vari livelli di testo */
+        .text-gray-800 {
+            color: #f3f4f6;
+        }
+    
+        .text-gray-700 {
+            color: #e2e8f0;
+        }
+    
+        .text-gray-600 {
+            color: #cbd5e0;
+        }
+    
+        /* Accenti colorati */
+        .text-purple-700 {
+            color: #b45309; /* Ambra come i badge */
+        }
+        .nav-link:hover {
+            color: #b45309;
+        }
+        nav h1.text-gray-800 {
+        color: #f3f4f6;
+        }
         .section-heading {
             position: relative;
             display: inline-block;
@@ -131,7 +213,8 @@
         
         .nav-container {
             backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(10, 22, 34, 0.9); 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         
         /* Custom styling for sections */
