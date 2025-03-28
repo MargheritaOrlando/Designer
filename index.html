@@ -106,6 +106,25 @@
         .nav-link:hover:after {
             width: 100%;
         }
+                /* Stile per elenchi puntati in ambra */
+        .amber-bullets {
+            list-style: none;
+        }
+        
+        .amber-bullets li {
+            position: relative;
+        }
+        
+        .amber-bullets li::before {
+            content: "•";
+            color: #b45309; /* Ambra, lo stesso colore dei tuoi badge */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+        }
+                
         #about, #projects, #skills {
             background-color: #070f17;/* Blu scuro principale */
         }
@@ -332,7 +351,7 @@
                             </p>
                              <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber ">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>BP</li>
                                     <li>Flow</li>
                                     <li>Storylines</li>
@@ -388,7 +407,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>Game Design</li>
                                     <li>Level Design</li>
                                     <li>Gameplay Design</li>
@@ -428,7 +447,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>Game Design</li>
                                     <li>Level Design</li>
                                     <li>Character Design</li>
@@ -457,7 +476,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>Game Design</li>
                                     <li>Level Design</li>
                                     <li>Gameplay Design</li>
@@ -486,7 +505,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>Game Design</li>
                                     <li>Level Design</li>
                                     <li>Sound Design</li>
@@ -516,7 +535,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>AI</li>
                                     <li>Procedural Generation</li>
                                     <li>Technical Design</li>
@@ -544,7 +563,7 @@
                             </p>
                             <div class="mb-4">
                                 <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="list-disc pl-5 text-gray-700">
+                                <ul class="amber-bullets pl-5 text-gray-700">
                                     <li>Game Design</li>
                                     <li>Level Design</li>
                                     <li>Documentation</li>
@@ -566,7 +585,7 @@
     <!-- Awards Section -->
     <section id="awards" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Award-Winning Games</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading ">Award-Winning Games</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <div class="border-b border-gray-200 p-4" style="border-color: #b45309;">
@@ -575,7 +594,7 @@
                     </div>
                     <div class="p-6">
                         <div class="mb-4">
-                            <h4 class="font-semibold">Third place at New Game Designer</h4>
+                            <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
                             <p class="text-gray-600">Milano - 2022</p>
                         </div>
                         <p class="text-gray-700">
@@ -591,14 +610,14 @@
                     </div>
                     <div class="p-6">
                         <div class="mb-4">
-                            <h4 class="font-semibold">Global Game Jam</h4>
+                            <h4 class="font-semibold text-amber">Global Game Jam</h4>
                             <p class="text-gray-600">Cosenza - 2019</p>
                         </div>
                         <p class="text-gray-700 mb-2">
                             <span class="font-semibold text-amber">Role:</span> Game Designer & 2D Artist
                         </p>
-                        <h4 class="font-semibold mb-2">Awarded for:</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <h4 class="font-semibold mb-2 text-amber">Awarded for:</h4>
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Best Overall</li>
                             <li>Best Game Design</li>
                             <li>Best Thematic Use</li>
@@ -615,14 +634,14 @@
                     </div>
                     <div class="p-6">
                         <div class="mb-4">
-                            <h4 class="font-semibold">Global Game Jam</h4>
+                            <h4 class="font-semibold text-amber">Global Game Jam</h4>
                             <p class="text-gray-600">Cosenza - 2018</p>
                         </div>
                         <p class="text-gray-700 mb-2">
                             <span class="font-semibold text-amber">Role:</span> Game Designer & 2D Artist
                         </p>
-                        <h4 class="font-semibold mb-2">Awarded for:</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <h4 class="font-semibold mb-2 text-amber">Awarded for:</h4>
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Best Game Design</li>
                             <li>Best Audio</li>
                             <li>Best Visuals</li>
@@ -644,7 +663,7 @@
                 <div class="grid md:grid-cols-4 gap-6">
                     <div class="bg-white shadow-lg rounded-lg p-6">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4">Languages</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Italian (Native)</li>
                             <li>English (B2 Level)</li>
                         </ul>
@@ -652,7 +671,7 @@
                     
                     <div class="bg-white shadow-lg rounded-lg p-6">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4">Game Engines</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Unreal Engine 5</li>
                             <li>Unity</li>
                         </ul>
@@ -660,7 +679,7 @@
                     
                     <div class="bg-white shadow-lg rounded-lg p-6">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4">Programming</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Java</li>
                             <li>C#</li>
                             <li>C++</li>
@@ -670,7 +689,7 @@
                     
                     <div class="bg-white shadow-lg rounded-lg p-6">
                         <h4 class="text-xl font-semibold text-gray-800 mb-4">Design Tools</h4>
-                        <ul class="list-disc pl-5 text-gray-700">
+                        <ul class="amber-bullets pl-5 text-gray-700">
                             <li>Microsoft Office Suite</li>
                             <li>Miro</li>
                             <li>Draw.io</li>
