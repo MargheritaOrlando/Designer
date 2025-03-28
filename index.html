@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #9370DB; 
+            --primary: #070f17; 
         }
         
         body {
@@ -99,7 +99,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: var(--primary);
+            background-color: #070f17;
             transition: width 0.3s ease;
         }
         
@@ -140,10 +140,10 @@
     
         /* Accenti colorati */
         .text-purple-700 {
-            color: #b45309; /* Ambra come i badge */
+            color: #070f17; /* Cambiato dal colore ambra */
         }
         .nav-link:hover {
-            color: #b45309;
+            color: #070f17;
         }
         nav h1.text-gray-800 {
             color: #f3f4f6;
@@ -161,7 +161,7 @@
             height: 3px;
             bottom: 0;
             left: 0;
-            background-color: var(--primary);
+            background-color: #070f17;
         }
         
         .card {
@@ -184,13 +184,13 @@
         }
         
         .btn-primary {
-            background-color: var(--primary);
+            background-color: #070f17;
             color: var(--text-light);
             transition: all 0.3s ease;
         }
         
         .btn-primary:hover {
-            background-color: var(--primary-dark);
+            background-color: #0a1622;
         }
         
         .project-img {
@@ -250,8 +250,8 @@
         }
         
         #contact {
-            background-color: var(--primary-dark);
-            color: var(--text-light);
+            background-color: #070f17;
+            color: #f3f4f6;
         }
         
         /* Purple highlight for selected project cards */
@@ -261,7 +261,7 @@
         }
         
         .project-card:hover {
-            border-left: 4px solid var(--primary);
+            border-left: 4px solid #070f17;
         }
     </style>
 </head>
@@ -321,7 +321,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Experience</h2>
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="p-8 border-b border-gray-200">
+                <div class="p-8 border-b border-gray-200" style="border-color: #070f17;">
                     <div class="flex flex-col md:flex-row items-start">
                         <div class="md:w-2/3">
                             <h3 class="text-2xl font-semibold text-gray-800 mb-2">Quest Designer</h3>
@@ -551,7 +551,7 @@
             <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Award-Winning Games</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="border-b border-gray-200 p-4">
+                    <div class="border-b border-gray-200 p-4" style="border-color: #070f17;">
                         <h3 class="text-xl font-semibold">REYA'S LIGHT</h3>
                         <p>2D Online, multiplayer, shooter, platform game</p>
                     </div>
@@ -672,7 +672,7 @@
                         <div>
                             <ul class="space-y-3">
                                 <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-purple-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg class="h-6 w-6 text-gray-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span>Character design</span>
@@ -767,13 +767,13 @@
                         </p>
                         <ul class="space-y-3">
                             <li class="flex items-center">
-                                <svg class="h-6 w-6 text-purple-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="h-6 w-6 text-gray-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                                 <span>email@example.com</span>
                             </li>
                             <li class="flex items-center">
-                                <svg class="h-6 w-6 text-purple-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="h-6 w-6 text-gray-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.73 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                                 </svg>
@@ -795,7 +795,7 @@
                                 <label for="message" class="block text-gray-800 mb-2">Message</label>
                                 <textarea id="message" rows="4" class="w-full p-2 border border-gray-300 rounded" placeholder="Your Message"></textarea>
                             </div>
-                            <button type="submit" class="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800 transition">Send Message</button>
+                            <button type="submit" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-900 transition">Send Message</button>
                         </form>
                     </div>
                 </div>
