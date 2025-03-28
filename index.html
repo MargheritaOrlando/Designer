@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Margherita Orlando - Quest Designer</title>
+    <title>Projects Preview</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary:  #0a1622; 
+            --primary: #0a1622;
+            --secondary: #070f17;
         }
         
         body {
-            background-color: #0a1622; 
+            background-color: #0a1622;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #f3f4f6 !important; /*var(--text-dark);*/
+            color: #f3f4f6 !important;
             scroll-behavior: smooth;
         }
+        
         /* Stile personalizzato per i badge ambra con testo bianco bordato di nero */
         .badge.amber-custom {
-            background-color: #b45309; /* Ambra medio-scuro (tra amber-700 e amber-800) */
-            color: white; /* Testo bianco */
-            font-weight: 500; /* Semi-bold per migliorare la leggibilità */
-            border: 1px solid #000000; /* Bordo nero */
+            background-color: #b45309;
+            color: white;
+            font-weight: 500;
+            border: 1px solid #000000;
             text-shadow: 
                 -1px -1px 0 #000,
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
-                1px 1px 0 #000; /* Contorno nero attorno al testo */
+                1px 1px 0 #000;
             border-radius: 20px;
             font-size: 0.85rem;
             padding: 0.25rem 0.75rem;
             display: inline-block;
             margin: 0.25rem;
         }
-    
+        
         /* Bordi blu scuro per i testi con ombra */
         h1, h2, h3, h4, h5, h6, p, li, span:not(.badge) {
             text-shadow: 
@@ -52,125 +54,31 @@
                 2px 2px 0 #0a1622;
         }
         
-        /* Bordi blu scuro per i container e card */
-        .bg-white, .card, .project-card, .shadow-lg, .rounded-lg {
-            border: 1px solid #0a1622;
-            box-shadow: 0 4px 6px rgba(10, 22, 34, 0.5);
-        }
-        
-        /* Bordi blu scuro per i badge (mantenendo quelli neri attuali) */
-        .badge.amber-custom {
-            border: 1px solid #0a1622;
-            text-shadow: 
-                -1px -1px 0 #0a1622,
-                1px -1px 0 #0a1622,
-                -1px 1px 0 #0a1622,
-                1px 1px 0 #0a1622;
-        }
-        
-        /* Bordi blu scuro per i link nella navigazione */
-        .nav-link:after {
-            background-color: #0a1622;
-        }
-        
-        /* Bordi blu scuro per i pulsanti e altri elementi interattivi */
-        button, .btn-primary {
-            border: 1px solid #0a1622;
-            box-shadow: 0 2px 4px rgba(10, 22, 34, 0.5);
-        }
-        .hero-image {
-            background-image: url('t-800.jpg');
-            background-size: cover;
-            background-position: top;
-            height: 10000px;
-        }
-        
-        .nav-link {
-            position: relative;
-            color: #f3f4f6;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #b45309;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-                /* Stile per elenchi puntati in ambra */
+        /* Stile per elenchi puntati in ambra */
         .amber-bullets {
             list-style: none;
         }
         
         .amber-bullets li {
             position: relative;
+            padding-left: 1.5em;
         }
         
         .amber-bullets li::before {
             content: "•";
-            color: #b45309; /* Ambra, lo stesso colore dei tuoi badge */
+            color: #b45309;
             font-weight: bold;
             display: inline-block;
             width: 1em;
-            margin-left: -1em;
             position: absolute;
+            left: 0;
         }
-                
-        #about, #projects, #skills {
-            background-color: #070f17;/* Blu scuro principale */
-        }
-    
-        #experience, #awards {
-            background-color: #070f17; 
-        }
-    
-        /* Titoli delle sezioni */
-        .section-heading {
-            color: #f3f4f6;
-        }
-    
-        /* Card e contenitori */
-        .bg-white {
-            background-color: #0a1622;  /* Blu scuro leggermente più chiaro */
-            color: #f3f4f6;
-        }
-    
-        /* Vari livelli di testo */
-        .text-gray-800 {
-            color: #f3f4f6;
-        }
-    
-        .text-gray-700 {
-            color: #e2e8f0;
-        }
-    
-        .text-gray-600 {
-            color: #cbd5e0;
-        }
-    
-        /* Accenti colorati */
-        .text-amber {
-            color: #b45309; /* Ambra come i badge */
-        }
-        .nav-link:hover {
-            color: #b45309;
-        }
-        nav h1.text-gray-800 {
-            color: #f3f4f6;
-        }
+        
         .section-heading {
             position: relative;
             display: inline-block;
             padding-bottom: 10px;
+            color: #f3f4f6;
         }
         
         .section-heading:after {
@@ -192,42 +100,21 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .badge {
-            background-color: var(--primary-light);
-            color: var(--text-light);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            padding: 0.25rem 0.75rem;
-            display: inline-block;
-            margin: 0.25rem;
+        .text-amber {
+            color: #b45309;
         }
         
-        .btn-primary {
-            background-color: #b45309;
-            color: white;
-            transition: all 0.3s ease;
+        .text-gray-700 {
+            color: #e2e8f0;
         }
         
-        .btn-primary:hover {
-            background-color: #92400e;
+        .text-gray-800 {
+            color: #f3f4f6;
         }
         
-        .project-img {
-            overflow: hidden;
-            border-radius: 0.5rem;
-        }
-        
-        .project-img img {
-            transition: transform 0.5s ease;
-        }
-        
-        .project-img:hover img {
-            transform: scale(1.05);
-        }
-
         .video-container {
           position: relative;
-          padding-bottom: 56.25%; /* Rapporto 16:9 */
+          padding-bottom: 56.25%;
           height: 0;
           overflow: hidden;
           max-width: 100%;
@@ -240,146 +127,65 @@
           left: 0;
           width: 100%;
           height: 100%;
-          border-radius: 8px; /* Per arrotondare gli angoli */
-        }
-        .nav-container {
-            backdrop-filter: blur(10px);
-            background-color: rgba(7, 15, 23, 0.85); /* #070f17 con 85% opacità */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        /* Custom styling for sections */
-        #about {
-            background-color: #0a1622;
+          border-radius: 8px;
         }
         
-        #experience {
-            background-color: #070f17;
+        .project-img {
+            overflow: hidden;
+            border-radius: 0.5rem;
         }
         
-        #projects {
-            background-color: #0a1622;
+        .project-img img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
-        #awards {
-            background-color: #070f17;
-        }
-        
-        #skills {
-            background-color: #070f17;
-        }
-        
-        #contact {
-            background-color: #070f17;
-            color: #f3f4f6;
-        }
-        
-        /* Purple highlight for selected project cards */
-        .project-card {
-            border-left: 4px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-            border-left: 4px solid #b45309;
+        .project-img:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="font-sans">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 nav-container">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div>
-                    <h1 class="text-2xl font-bold text-gray-800">Margherita Orlando</h1>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#awards" class="nav-link">Awards</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <!-- Mobile menu button -->
-                    <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-500 hover:text-gray-800 hover:border-gray-800">
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Header con testo bordato usando stili inline -->
-    <header class="pt-24 pb-12 text-white relative flex items-center justify-center" style="min-height: 600px;">
-      <!-- Background image with overlay -->
-      <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
-      <div class="absolute inset-0 z-0">
-        <img src="t-800.jpg" alt="Terminator Background" class="w-full h-full object-cover object-top">
-      </div>
-      
-      <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center">
-          <h1 class="text-5xl font-bold mb-2" style="color: white; text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;">
-            Margherita Orlando
-          </h1>
-          <h2 class="text-2xl mb-6" style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
-            Quest Designer
-          </h2>
-          <p class="text-xl mb-8 max-w-3xl mx-auto" style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
-            Currently working as Quest Designer within the Narrative Team at Nacon Studio Milan on TERMINATOR: SURVIVORS
-          </p>
-        </div>
-      </div>
-    </header>
-    
-    <!-- Experience Section -->
-<section id="experience" class="py-16">
+<body>
+<!-- Projects Section -->
+<section id="projects" class="py-16" style="background-color: #0a1622;">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Experience</h2>
-        <div class="flex flex-col md:flex-row">
+        <h2 class="text-3xl font-bold mb-10 section-heading">Projects</h2>
+        
+        <!-- ARTIFICIAL - PROXY BAR -->
+        <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
-            <div class="md:w-1/2 bg-white shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8">
+            <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
                 <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Quest Designer</h3>
-                    <h4 class="text-xl text-amber mb-4">Nacon Studio Milan</h4>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">ARTIFICIAL - PROXY BAR</h3>
                     <p class="text-gray-700 mb-4">
-                        Currently working as Quest Designer within the Narrative Team. Crafting immersive narrative 
-                        experiences and dynamic quest structures for the groundbreaking survival game TERMINATOR: SURVIVORS.
+                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                        allowing them to respond dynamically to any question from the player. Interactions can be 
+                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
                     </p>
                     <div class="mb-4">
                         <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
                         <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>BP</li>
-                            <li>Flow</li>
-                            <li>Storylines</li>
+                            <li>Game Design</li>
+                            <li>Level Design</li>
+                            <li>Gameplay Design</li>
+                            <li>Narrative Design</li>
+                            <li>Sound Design</li>
+                            <li>3D Modeling</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- Videos centrally aligned on the right -->
-            <div class="md:w-1/2 space-y-6 flex flex-col justify-center">
+            <!-- Media content on the right -->
+            <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="video-container">
                     <iframe 
                         width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/_HNPT7efHq0?si=oilW8GFcmdFIuR_O" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-container">
-                    <iframe 
-                        width="560" 
-                        height="315" 
-                        src="https://www.youtube.com/embed/LepEDOgw0Ec?si=lwvk8GK6WAFINvGe" 
-                        title="YouTube video player" 
+                        height="315"
+                        src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                        title="YouTube video player"
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" 
@@ -388,443 +194,68 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Projects Section -->
-<section id="projects" class="py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Projects</h2>
-        <div class="space-y-8">
-            <!-- ARTIFICIAL - PROXY BAR -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        
+        <!-- REYA'S LIGHT -->
+        <div class="flex flex-col md:flex-row mb-12">
+            <!-- Text content on the left -->
+            <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
                 <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">ARTIFICIAL - PROXY BAR</h3>
-                            <p class="text-gray-700 mb-4">
-                                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                                allowing them to respond dynamically to any question from the player. Interactions can be 
-                                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>Game Design</li>
-                                    <li>Level Design</li>
-                                    <li>Gameplay Design</li>
-                                    <li>Narrative Design</li>
-                                    <li>Sound Design</li>
-                                    <li>3D Modeling</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="video-container">
-                                <iframe 
-                                    width="560" 
-                                    height="315"
-                                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                                    title="YouTube video player"
-                                    frameborder="0" 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                    referrerpolicy="strict-origin-when-cross-origin" 
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">REYA'S LIGHT</h3>
+                    <p class="text-gray-700 mb-4">
+                        A 2D online multiplayer hero-shooter platform game. The project won third place at 
+                        the New Game Designer competition in Milano, 2022.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
+                        <ul class="amber-bullets pl-5 text-gray-700">
+                            <li>Game Design</li>
+                            <li>Level Design</li>
+                            <li>Character Design</li>
+                            <li>Technical Design</li>
+                            <li>2D Sprite Creation</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- REYA'S LIGHT -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Media content on the right -->
+            <div class="md:w-1/2 flex flex-col justify-center">
+                <div class="shadow-lg rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/600/340" alt="Reya's Light" class="w-full object-cover">
+                </div>
+            </div>
+        </div>
+        
+        <!-- FELUX -->
+        <div class="flex flex-col md:flex-row mb-12">
+            <!-- Text content on the left -->
+            <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
                 <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">REYA'S LIGHT</h3>
-                            <p class="text-gray-700 mb-4">
-                                A 2D online multiplayer hero-shooter platform game. The project won third place at 
-                                the New Game Designer competition in Milano, 2022.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>Game Design</li>
-                                    <li>Level Design</li>
-                                    <li>Character Design</li>
-                                    <li>Technical Design</li>
-                                    <li>2D Sprite Creation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="project-img rounded-lg overflow-hidden">
-                                <img src="/api/placeholder/600/300" alt="Reya's Light" class="w-full h-full object-cover">
-                            </div>
-                        </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">FELUX</h3>
+                    <p class="text-gray-700 mb-4">
+                        A 3D physics-based puzzle game focusing on innovative gameplay mechanics.
+                    </p>
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
+                        <ul class="amber-bullets pl-5 text-gray-700">
+                            <li>Game Design</li>
+                            <li>Level Design</li>
+                            <li>Gameplay Design</li>
+                            <li>Narrative Design</li>
+                            <li>Physical Prototype</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             
-            <!-- FELUX -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">FELUX</h3>
-                            <p class="text-gray-700 mb-4">
-                                A 3D physics-based puzzle game focusing on innovative gameplay mechanics.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>Game Design</li>
-                                    <li>Level Design</li>
-                                    <li>Gameplay Design</li>
-                                    <li>Narrative Design</li>
-                                    <li>Physical Prototype</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="project-img rounded-lg overflow-hidden">
-                                <img src="/api/placeholder/600/300" alt="Felux" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- NOISY MALL -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">NOISY MALL</h3>
-                            <p class="text-gray-700 mb-4">
-                                A 3D stealth game focused on sound-based interactions, creating a unique gameplay experience.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>Game Design</li>
-                                    <li>Level Design</li>
-                                    <li>Sound Design</li>
-                                    <li>Spatial Audio</li>
-                                    <li>3D Modeling</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="project-img rounded-lg overflow-hidden">
-                                <img src="/api/placeholder/600/300" alt="Noisy Mall" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- PROCEDURAL HOME GENERATOR -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROCEDURAL HOME GENERATOR</h3>
-                            <p class="text-gray-700 mb-4">
-                                An artificial intelligence project for the procedural generation of houses, 
-                                enabling the automatic creation of unique building designs.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>AI</li>
-                                    <li>Procedural Generation</li>
-                                    <li>Technical Design</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="project-img rounded-lg overflow-hidden">
-                                <img src="/api/placeholder/600/300" alt="Procedural Home Generator" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- THE DARK LADY AWAKENS -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <div class="flex flex-col md:flex-row items-start">
-                        <div class="md:w-3/5 md:pr-8">
-                            <h3 class="text-2xl font-semibold text-gray-800 mb-2">THE DARK LADY AWAKENS</h3>
-                            <p class="text-gray-700 mb-4">
-                                3D single-player, third-person role-playing game design, inspired by the Harry Potter universe. 
-                                The concept features a story-driven experience set in an open-world map, with a strong puzzle component.
-                            </p>
-                            <div class="mb-4">
-                                <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                                <ul class="amber-bullets pl-5 text-gray-700">
-                                    <li>Game Design</li>
-                                    <li>Level Design</li>
-                                    <li>Documentation</li>
-                                    <li>Prototype Creation</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-2/5 mt-4 md:mt-0">
-                            <div class="project-img rounded-lg overflow-hidden">
-                                <img src="/api/placeholder/600/300" alt="The Dark Lady Awakens" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
+            <!-- Media content on the right -->
+            <div class="md:w-1/2 flex flex-col justify-center">
+                <div class="shadow-lg rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/600/340" alt="Felux" class="w-full object-cover">
                 </div>
             </div>
         </div>
     </div>
 </section>
-    <!-- Awards Section -->
-    <section id="awards" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading ">Award-Winning Games</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="border-b border-gray-200 p-4" style="border-color: #b45309;">
-                        <h3 class="text-xl font-semibold">REYA'S LIGHT</h3>
-                        <p>2D Online, multiplayer, shooter, platform game</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
-                            <p class="text-gray-600">Milano - 2022</p>
-                        </div>
-                        <p class="text-gray-700">
-                            <span class="font-semibold text-amber">Role:</span> Game Designer & 2D Artist
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="border-b border-gray-200 p-4" style="border-color: #b45309;">
-                        <h3 class="text-xl font-semibold">SWEET HOME OF MINE</h3>
-                        <p>2D strategic game</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-amber">Global Game Jam</h4>
-                            <p class="text-gray-600">Cosenza - 2019</p>
-                        </div>
-                        <p class="text-gray-700 mb-2">
-                            <span class="font-semibold text-amber">Role:</span> Game Designer & 2D Artist
-                        </p>
-                        <h4 class="font-semibold mb-2 text-amber">Awarded for:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Best Overall</li>
-                            <li>Best Game Design</li>
-                            <li>Best Thematic Use</li>
-                            <li>Best Audio</li>
-                            <li>Best Visuals</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <div class="border-b border-gray-200 p-4" style="border-color: #b45309;">
-                        <h3 class="text-xl font-semibold">NO SIGNAL</h3>
-                        <p>2D platform game</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-4">
-                            <h4 class="font-semibold text-amber">Global Game Jam</h4>
-                            <p class="text-gray-600">Cosenza - 2018</p>
-                        </div>
-                        <p class="text-gray-700 mb-2">
-                            <span class="font-semibold text-amber">Role:</span> Game Designer & 2D Artist
-                        </p>
-                        <h4 class="font-semibold mb-2 text-amber">Awarded for:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Best Game Design</li>
-                            <li>Best Audio</li>
-                            <li>Best Visuals</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Skills & Knowledge</h2>
-            
-            <!-- Technical Skills -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Technical Knowledge</h3>
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Languages</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Italian (Native)</li>
-                            <li>English (B2 Level)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Game Engines</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Unreal Engine 5</li>
-                            <li>Unity</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Programming</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Java</li>
-                            <li>C#</li>
-                            <li>C++</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Design Tools</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Microsoft Office Suite</li>
-                            <li>Miro</li>
-                            <li>Draw.io</li>
-                            <li>Photoshop</li>
-                            <li>Blender</li>
-                            <li>Git</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Professional Skills -->
-            <div>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Professional Skills</h3>
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Character design</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Collaboration & communication skills</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Problem-solving & creative thinking</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Adaptability & quick learning</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">About Me</h2>
-            <div class="bg-white shadow-lg rounded-lg p-8">
-                <p class="text-lg leading-relaxed">
-                    I am a Quest Designer passionate about video games and their design. Creativity, adaptability, 
-                    and teamwork are my strengths. I love crafting engaging narratives, designing immersive quests, 
-                    and collaborating with teams to bring compelling stories to life. Always eager to learn, I quickly 
-                    adapt to new challenges and tools to enhance the player experience.
-                </p>
-                
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-4">Education</h3>
-                    <div class="space-y-4">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">Master's Degree in Computer Science, Game Design</h4>
-                                <p class="text-amber">University of Milan, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2023</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">Bachelor's Degree in Computer Engineering</h4>
-                                <p class="text-amber ">University of Calabria, Rende, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2019</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">High School Diploma in Human Sciences</h4>
-                                <p class="text-amber ">Benedetto XVI Institute, Crotone, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2014</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-10 section-heading">Contact Me</h2>
-            <div class="bg-white shadow-lg rounded-lg p-8">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 mb-8 md:mb-0">
-                    
-                        <ul class="space-y-3">
-                            <li class="flex items-center">
-                                <svg class="h-6 w-6 text-amber-700 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                                <span>email@example.com</span>
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="h-6 w-6 text-amber-700 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.73 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                                </svg>
-                                <span>linkedin.com/in/yourprofile</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Margherita Orlando. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
