@@ -345,32 +345,31 @@
         <div class="flex flex-col md:flex-row">
             <!-- Text content on the left -->
             <div class="md:w-1/2 bg-white shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
+                <div class="p-8 border-b" style="border-color: #b45309;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Quest Designer</h3>
-                    <h4 class="text-xl text-amber mb-4">Nacon Studio Milan</h4>
+                    <h4 class="text-xl text-amber-600 mb-4">Nacon Studio Milan</h4>
                     <p class="text-gray-700 mb-4">
                         Currently working as Quest Designer within the Narrative Team. Crafting immersive narrative 
                         experiences and dynamic quest structures for the groundbreaking survival game TERMINATOR: SURVIVORS.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>BP</li>
-                            <li>Flow</li>
-                            <li>Storylines</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-700">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">BP</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Flow</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Storylines</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-800 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-800">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -381,12 +380,13 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Videos centrally aligned on the right -->
             <div class="md:w-1/2 space-y-6 flex flex-col justify-center">
-                <div class="video-container">
+                <div class="relative overflow-hidden pt-[56.25%]">
                     <iframe 
-                        width="560" 
-                        height="315" 
+                        class="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/_HNPT7efHq0?si=oilW8GFcmdFIuR_O" 
                         title="YouTube video player" 
                         frameborder="0" 
@@ -395,10 +395,9 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <div class="video-container">
+                <div class="relative overflow-hidden pt-[56.25%]">
                     <iframe 
-                        width="560" 
-                        height="315" 
+                        class="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/LepEDOgw0Ec?si=lwvk8GK6WAFINvGe" 
                         title="YouTube video player" 
                         frameborder="0" 
@@ -411,44 +410,46 @@
         </div>
     </div>
 </section>
+
 <!-- Projects Section -->
 <section id="projects" class="py-16" style="background-color: #0a1622;">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Projects</h2>
+        <h2 class="text-3xl font-bold text-white mb-10 text-center section-heading">Projects</h2>
         
         <!-- ARTIFICIAL - PROXY BAR -->
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">ARTIFICIAL - PROXY BAR</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">ARTIFICIAL - PROXY BAR</h3>
+                    <p class="text-gray-300 mb-4">
                         A single-player online investigative 3D game where every NPC is powered by advanced AI, 
                         allowing them to respond dynamically to any question from the player. Interactions can be 
                         carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Gameplay Design</li>
-                            <li>Narrative Design</li>
-                            <li>Sound Design</li>
-                            <li>3D Modeling</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">AI</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Procedural Generation</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Technical Design</li> before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Gameplay Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Narrative Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Sound Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">3D Modeling</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            Play Game
+                            Play Demo
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -459,12 +460,13 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
-                <div class="video-container">
+                <div class="relative overflow-hidden pt-[56.25%]">
                     <iframe 
-                        width="560" 
-                        height="315"
+                        class="absolute top-0 left-0 w-full h-full"
                         src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
                         title="YouTube video player"
                         frameborder="0" 
@@ -480,27 +482,26 @@
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">REYA'S LIGHT</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">REYA'S LIGHT</h3>
+                    <p class="text-gray-300 mb-4">
                         A 2D online multiplayer hero-shooter platform game. The project won third place at 
                         the New Game Designer competition in Milano, 2022.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Character Design</li>
-                            <li>Technical Design</li>
-                            <li>2D Sprite Creation</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Character Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Technical Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">2D Sprite Creation</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-             <div class="award-container">
-                        <div class="award-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 mr-2">
                                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
                                 <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
                                 <path d="M4 22h16"></path>
@@ -508,20 +509,21 @@
                                 <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
                                 <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                             </svg>
-                            <span class="award-title">Award Winner</span>
+                            <span class="font-semibold text-white">Award Winner</span>
                         </div>
-                        <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
-                        <p class="text-gray-700">Milano - 2022</p>
+                        <h4 class="font-semibold text-amber-600 mb-1">Third place at New Game Designer</h4>
+                        <p class="text-gray-300">Milano - 2022</p>
                     </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -532,6 +534,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
@@ -544,27 +548,26 @@
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">SWEET HOME OF MINE</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">SWEET HOME OF MINE</h3>
+                    <p class="text-gray-300 mb-4">
                         A 2D online multiplayer hero-shooter platform game. The project won third place at 
                         the New Game Designer competition in Milano, 2022.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Character Design</li>
-                            <li>Technical Design</li>
-                            <li>2D Sprite Creation</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Character Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Technical Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">2D Sprite Creation</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-             <div class="award-container">
-                        <div class="award-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 mr-2">
                                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
                                 <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
                                 <path d="M4 22h16"></path>
@@ -572,20 +575,21 @@
                                 <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
                                 <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                             </svg>
-                            <span class="award-title">Award Winner</span>
+                            <span class="font-semibold text-white">Award Winner</span>
                         </div>
-                        <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
-                        <p class="text-gray-700">Milano - 2022</p>
+                        <h4 class="font-semibold text-amber-600 mb-1">Third place at New Game Designer</h4>
+                        <p class="text-gray-300">Milano - 2022</p>
                     </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -596,39 +600,40 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/600/340" alt="Reya's Light" class="w-full object-cover">
+                    <img src="/api/placeholder/600/340" alt="Sweet Home of Mine" class="w-full object-cover">
                 </div>
             </div>
         </div>
      
-        <!-- no signal -->
+        <!-- NO SIGNAL -->
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">NO SIGNAL</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">NO SIGNAL</h3>
+                    <p class="text-gray-300 mb-4">
                         A 2D online multiplayer hero-shooter platform game. The project won third place at 
                         the New Game Designer competition in Milano, 2022.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Character Design</li>
-                            <li>Technical Design</li>
-                            <li>2D Sprite Creation</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Character Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Technical Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">2D Sprite Creation</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-             <div class="award-container">
-                        <div class="award-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6 mb-4">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 mr-2">
                                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
                                 <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
                                 <path d="M4 22h16"></path>
@@ -636,20 +641,21 @@
                                 <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
                                 <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
                             </svg>
-                            <span class="award-title">Award Winner</span>
+                            <span class="font-semibold text-white">Award Winner</span>
                         </div>
-                        <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
-                        <p class="text-gray-700">Milano - 2022</p>
+                        <h4 class="font-semibold text-amber-600 mb-1">Third place at New Game Designer</h4>
+                        <p class="text-gray-300">Milano - 2022</p>
                     </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -660,10 +666,12 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/600/340" alt="Reya's Light" class="w-full object-cover">
+                    <img src="/api/placeholder/600/340" alt="No Signal" class="w-full object-cover">
                 </div>
             </div>
         </div>
@@ -672,32 +680,31 @@
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">FELUX</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">FELUX</h3>
+                    <p class="text-gray-300 mb-4">
                         A 3D physics-based puzzle game focusing on innovative gameplay mechanics.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Gameplay Design</li>
-                            <li>Narrative Design</li>
-                            <li>Physical Prototype</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Gameplay Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Narrative Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Physical Prototype</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -708,6 +715,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
@@ -720,32 +729,31 @@
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">NOISY MALL</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">NOISY MALL</h3>
+                    <p class="text-gray-300 mb-4">
                         A 3D stealth game focused on sound-based interactions, creating a unique gameplay experience.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Sound Design</li>
-                            <li>Spatial Audio</li>
-                            <li>3D Modeling</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Sound Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Spatial Audio</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">3D Modeling</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
                             Play Game
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -756,6 +764,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
@@ -764,35 +774,34 @@
             </div>
         </div>
         
-        <!-- PROCEDURAL HOME GENERATOR -->
+      <!-- PROCEDURAL HOME GENERATOR -->
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROCEDURAL HOME GENERATOR</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">PROCEDURAL HOME GENERATOR</h3>
+                    <p class="text-gray-300 mb-4">
                         An artificial intelligence project for the procedural generation of houses, 
                         enabling the automatic creation of unique building designs.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>AI</li>
-                            <li>Procedural Generation</li>
-                            <li>Technical Design</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">AI</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Procedural Generation</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Technical Design</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400 mr-4">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            Play Game
+                            Play Demo
                         </a>
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -803,6 +812,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
@@ -815,26 +826,25 @@
         <div class="flex flex-col md:flex-row mb-12">
             <!-- Text content on the left -->
             <div class="md:w-1/2 shadow-lg rounded-lg overflow-hidden mb-8 md:mb-0 md:mr-8" style="background-color: #070f17;">
-                <div class="p-8 border-b border-gray-200" style="border-color: #b45309;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">THE DARK LADY AWAKENS</h3>
-                    <p class="text-gray-700 mb-4">
+                <div class="p-8 border-b" style="border-color: #b45309;">
+                    <h3 class="text-2xl font-semibold text-white mb-2">THE DARK LADY AWAKENS</h3>
+                    <p class="text-gray-300 mb-4">
                         3D single-player, third-person role-playing game design, inspired by the Harry Potter universe. 
                         The concept features a story-driven experience set in an open-world map, with a strong puzzle component.
                     </p>
                     <div class="mb-4">
-                        <h4 class="font-semibold mb-2 text-amber">Roles:</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
+                        <h4 class="font-semibold mb-2 text-amber-600">Roles:</h4>
+                        <ul class="pl-5 text-gray-300">
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Game Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Level Design</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Documentation</li>
+                            <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Prototype Creation</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-            <div class="mt-6">
-                        <a href="#" class="resource-link">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-amber-600 hover:text-amber-400">
+                            <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
                                 <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -845,6 +855,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            
             <!-- Media content on the right -->
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="shadow-lg rounded-lg overflow-hidden">
@@ -854,186 +866,220 @@
         </div>
     </div>
 </section>
-    <!-- Skills Section -->
-    <section id="skills" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Skills & Knowledge</h2>
-            
-            <!-- Technical Skills -->
-            <div class="mb-12">
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Technical Knowledge</h3>
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Languages</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Italian (Native)</li>
-                            <li>English (B2 Level)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Game Engines</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Unreal Engine 5</li>
-                            <li>Unity</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Programming</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Java</li>
-                            <li>C#</li>
-                            <li>C++</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="bg-white shadow-lg rounded-lg p-6">
-                        <h4 class="text-xl font-semibold text-gray-800 mb-4">Design Tools</h4>
-                        <ul class="amber-bullets pl-5 text-gray-700">
-                            <li>Microsoft Office Suite</li>
-                            <li>Miro</li>
-                            <li>Draw.io</li>
-                            <li>Photoshop</li>
-                            <li>Blender</li>
-                            <li>Git</li>
-                        </ul>
-                    </div>
+   <!-- Skills Section -->
+<section id="skills" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center section-heading">Skills & Knowledge</h2>
+        
+        <!-- Technical Skills -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Technical Knowledge</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Languages</h4>
+                    <ul class="pl-5 text-gray-700">
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Italian (Native)</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">English (B2 Level)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Game Engines</h4>
+                    <ul class="pl-5 text-gray-700">
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Unreal Engine 5</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Unity</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Programming</h4>
+                    <ul class="pl-5 text-gray-700">
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Java</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">C#</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">C++</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Python</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Design Tools</h4>
+                    <ul class="pl-5 text-gray-700">
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Microsoft Office Suite</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Miro</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Draw.io</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Photoshop</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Blender</li>
+                        <li class="flex items-center before:content-['•'] before:text-amber-600 before:mr-2">Git</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- Professional Skills -->
-            <div>
-                <h3 class="text-2xl font-semibold text-gray-800 mb-6">Professional Skills</h3>
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Character design</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Collaboration & communication skills</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Problem-solving & creative thinking</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-6 w-6 text-amber mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                    <span>Adaptability & quick learning</span>
-                                </li>
-                            </ul>
-                        </div>
+        </div>
+        
+        <!-- Professional Skills -->
+        <div>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-6">Professional Skills</h3>
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Character design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Collaboration & communication skills</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Problem-solving & creative thinking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Adaptability & quick learning</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>User-centered design approach</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Project management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Documentation & technical writing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Game UX/UI design</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- About Section -->
-    <section id="about" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">About Me</h2>
-            <div class="bg-white shadow-lg rounded-lg p-8">
-                <p class="text-lg leading-relaxed">
-                    I am a Quest Designer passionate about video games and their design. Creativity, adaptability, 
-                    and teamwork are my strengths. I love crafting engaging narratives, designing immersive quests, 
-                    and collaborating with teams to bring compelling stories to life. Always eager to learn, I quickly 
-                    adapt to new challenges and tools to enhance the player experience.
-                </p>
-                
-                <div class="mt-8">
-                    <h3 class="text-xl font-semibold mb-4">Education</h3>
-                    <div class="space-y-4">
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">Master's Degree in Computer Science, Game Design</h4>
-                                <p class="text-amber">University of Milan, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2023</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">Bachelor's Degree in Computer Engineering</h4>
-                                <p class="text-amber ">University of Calabria, Rende, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2019</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-col md:flex-row">
-                            <div class="md:w-2/5">
-                                <h4 class="font-semibold">High School Diploma in Human Sciences</h4>
-                                <p class="text-amber ">Benedetto XVI Institute, Crotone, Italy</p>
-                            </div>
-                            <div class="md:w-3/5">
-                                <p>2014</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white mb-10 section-heading">Contact Me</h2>
-            <div class="bg-white shadow-lg rounded-lg p-8">
-                <div class="card-content">
+<section id="about" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center section-heading">About Me</h2>
+        <div class="bg-white shadow-lg rounded-lg p-8">
+            <p class="text-lg leading-relaxed">
+                I am a Quest Designer passionate about video games and their design. Creativity, adaptability, 
+                and teamwork are my strengths. I love crafting engaging narratives, designing immersive quests, 
+                and collaborating with teams to bring compelling stories to life. Always eager to learn, I quickly 
+                adapt to new challenges and tools to enhance the player experience.
+            </p>
+            
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Education</h3>
+                <div class="space-y-4">
                     <div class="flex flex-col md:flex-row">
-                        <div class="md:w-1/2 mb-8 md:mb-0">
-                            <!-- Solo collegamenti per email e linkedin con icone -->
-                            <ul class="space-y-6">
-                                <li>
-                                    <a href="mailto:email@example.com" class="resource-link text-xl">
-                                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                            <polyline points="22,6 12,13 2,6"></polyline>
-                                        </svg>
-                                        email@example.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="resource-link text-xl">
-                                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                            <rect x="2" y="9" width="4" height="12"></rect>
-                                            <circle cx="4" cy="4" r="2"></circle>
-                                        </svg>
-                                        linkedin.com/in/yourprofile
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="md:w-2/5">
+                            <h4 class="font-semibold">Master's Degree in Computer Science, Game Design</h4>
+                            <p class="text-amber-600">University of Milan, Italy</p>
+                        </div>
+                        <div class="md:w-3/5">
+                            <p>2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2/5">
+                            <h4 class="font-semibold">Bachelor's Degree in Computer Engineering</h4>
+                            <p class="text-amber-600">University of Calabria, Rende, Italy</p>
+                        </div>
+                        <div class="md:w-3/5">
+                            <p>2019</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2/5">
+                            <h4 class="font-semibold">High School Diploma in Human Sciences</h4>
+                            <p class="text-amber-600">Benedetto XVI Institute, Crotone, Italy</p>
+                        </div>
+                        <div class="md:w-3/5">
+                            <p>2014</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2025 Margherita Orlando. All rights reserved.</p>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white mb-10 text-center section-heading">Contact Me</h2>
+        <div class="bg-white shadow-lg rounded-lg p-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!-- Solo collegamenti per email e linkedin con icone -->
+                    <ul class="space-y-6">
+                        <li>
+                            <a href="mailto:email@example.com" class="inline-flex items-center text-xl text-amber-600 hover:text-amber-800">
+                                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                email@example.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="inline-flex items-center text-xl text-amber-600 hover:text-amber-800">
+                                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                linkedin.com/in/yourprofile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-lg h-full flex items-center justify-center">
+                        <p class="text-lg text-center">
+                            I'm always open to new opportunities and collaborations.<br> 
+                            Feel free to reach out!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Margherita Orlando. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
