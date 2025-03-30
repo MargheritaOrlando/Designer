@@ -192,15 +192,7 @@
         nav h1.text-gray-800 {
             color: #f3f4f6;
         }
-                .resource-link {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.5rem;
-            color: #e2e8f0; 
-            text-decoration: none;
-            transition: color 0.3s ease;
-            white-space: nowrap; /* Impedisce l'a capo del testo */
-        }
+          
         .resource-link:hover {
         color: #b45309; /* Il testo diventa ambra al passaggio del mouse */
     }
@@ -323,6 +315,166 @@
         .project-card:hover {
             border-left: 4px solid #b45309;
         }
+
+        /* Animazione per Play Game */
+    .play-icon-container {
+        position: relative;
+        margin-right: 0.75rem;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0a1622;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+    
+    .play-icon {
+        stroke: #d1d5db;
+        transition: stroke 0.3s ease, opacity 0.3s ease;
+        z-index: 2;
+    }
+    
+    .resource-link:hover .play-icon {
+        stroke: #b45309;
+        opacity: 0;
+    }
+    
+    /* Stile per Documents con pila di documenti */
+    .docs-stack-container {
+        position: relative;
+        margin-right: 0.75rem;
+        width: 30px;
+        height: 24px;
+    }
+    
+    .doc-svg {
+        position: absolute;
+        width: 18px;
+        height: 20px;
+        left: 0;
+        top: 0;
+        stroke: #d1d5db;
+        fill: #0a1622;
+        stroke-width: 2;
+        transition: all 0.3s ease;
+    }
+    
+    .doc-svg-main {
+        z-index: 10;
+    }
+    
+    .doc-svg-back-1 {
+        z-index: 5;
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    
+    .doc-svg-back-2 {
+        z-index: 1;
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+    
+    .doc-svg-line {
+        stroke: #d1d5db;
+        stroke-width: 2;
+        transition: all 0.3s ease;
+    }
+    
+    .resource-link:hover .doc-svg {
+        stroke: #b45309;
+    }
+    
+    .resource-link:hover .doc-svg-line {
+        stroke: #b45309;
+    }
+    
+    .resource-link:hover .doc-svg-back-1 {
+        opacity: 1;
+        transform: translate(4px, 2px);
+    }
+    
+    .resource-link:hover .doc-svg-back-2 {
+        opacity: 1;
+        transform: translate(8px, 4px);
+    }
+    
+    /* Animazione Pong */
+    .pong-animation {
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        overflow: hidden;
+        z-index: 3;
+    }
+    
+    .resource-link:hover .pong-animation {
+        opacity: 1;
+    }
+    
+    .pong-field {
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        position: relative;
+    }
+    
+    .pong-paddle1, .pong-paddle2 {
+        position: absolute;
+        width: 2px;
+        height: 6px;
+        background-color: #b45309;
+    }
+    
+    .pong-paddle1 {
+        left: 3px;
+        animation: paddle-move 1.5s infinite alternate;
+    }
+    
+    .pong-paddle2 {
+        right: 3px;
+        animation: paddle-move 1.5s infinite alternate-reverse;
+    }
+    
+    .pong-ball {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background-color: #b45309;
+        border-radius: 50%;
+        animation: ball-move 2s infinite linear;
+    }
+    
+    /* Definizione delle animazioni */
+    @keyframes paddle-move {
+        0% { top: 4px; }
+        100% { top: 14px; }
+    }
+    
+    @keyframes ball-move {
+        0% { top: 12px; left: 5px; }
+        25% { top: 5px; left: 12px; }
+        50% { top: 12px; left: 19px; }
+        75% { top: 19px; left: 12px; }
+        100% { top: 12px; left: 5px; }
+    }
+    
+    /* Modifiche all'elemento .resource-link esistente */
+    .resource-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #e2e8f0; 
+        text-decoration: none;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+        position: relative; /* Aggiunto per posizionamento assoluto di pong-animation */
+    }
     </style>
 </head>
 <body class="font-sans">
