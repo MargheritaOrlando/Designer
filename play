@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margherita Orlando - Quest Designer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+    
     <style>
         :root {
             --primary:  #0a1622; 
@@ -602,6 +604,21 @@
         text-decoration: none;
         position: relative;
     }
+    .righteous-regular {
+            font-family: "Righteous", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        /* Opzionale: applica il font a tutto il corpo del documento */
+        body {
+            font-family: "Righteous", sans-serif;
+        }
+        
+        /* Opzionale: applica il font solo a elementi specifici */
+        h1, h2, .special-text {
+            font-family: "Righteous", sans-serif;
+        }
     </style>
 </head>
 <body class="font-sans">
