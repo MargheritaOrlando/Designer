@@ -628,7 +628,7 @@
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-gray-800 mb-10 section-heading">Projects & Awards</h2>
         
-<!-- Updated HTML with IMPROVED animated icons -->
+<!-- PROJECT_1 -->
 <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
     <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
         <!-- Text content on the left -->
@@ -656,7 +656,7 @@
                     <li>Prototype Creation</li>
                 </ul>
             </div>
-                <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
                 <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
@@ -672,145 +672,59 @@
                 <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
             </div>
             
-            <!-- Link alle risorse with IMPROVED ANIMATED ICONS -->
+            <!-- Link alle risorse con spazio sopra -->
             <div class="mt-6">
-                <!-- IMPROVED Animated Play Button -->
-                <a href="#" class="resource-link play-link" style="display: flex; align-items: center; margin-bottom: 14px; text-decoration: none;">
-                    <div class="icon-container" style="position: relative; width: 30px; height: 30px; margin-right: 8px;">
-                        <svg class="play-icon" width="30" height="30" viewBox="0 0 30 30">
-                            <style>
-                                @keyframes playPulse {
-                                    0% { transform: scale(1); opacity: 0.8; }
-                                    50% { transform: scale(1.15); opacity: 0.4; }
-                                    100% { transform: scale(1.3); opacity: 0; }
-                                }
-                                
-                                @keyframes playBounce {
-                                    0% { transform: translateX(0); }
-                                    15% { transform: translateX(3px); }
-                                    30% { transform: translateX(0); }
-                                    45% { transform: translateX(2px); }
-                                    60% { transform: translateX(0); }
-                                }
-                                
-                                .play-outer {
-                                    fill: none;
-                                    stroke: #d1d5db;
-                                    stroke-width: 1.5;
-                                    opacity: 0.7;
-                                    transition: stroke 0.3s, opacity 0.3s;
-                                }
-                                
-                                .play-icon .play-triangle {
-                                    fill: #d1d5db;
-                                    stroke: none;
-                                    transition: fill 0.3s, transform 0.3s;
-                                    transform-origin: center;
-                                }
-                                
-                                .play-link:hover .play-outer {
-                                    stroke: #b45309;
-                                    opacity: 1;
-                                    animation: playPulse 1s infinite;
-                                }
-                                
-                                .play-link:hover .play-triangle {
-                                    fill: #b45309;
-                                    animation: playBounce 1.2s infinite;
-                                }
-                            </style>
-                            <circle class="play-outer" cx="15" cy="15" r="13"></circle>
-                            <polygon class="play-triangle" points="11,8 22,15 11,22"></polygon>
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
                         </svg>
                     </div>
-                    <span style="font-size: 15px; font-weight: bold; color: #d1d5db; transition: color 0.3s;" 
-                          class="link-text" 
-                          onmouseover="this.style.color='#b45309';" 
-                          onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
+                        </div>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
-                <!-- IMPROVED Animated Documents Icon -->
-                <a href="#" class="resource-link docs-link" style="display: flex; align-items: center; text-decoration: none;">
-                    <div class="icon-container" style="position: relative; width: 30px; height: 30px; margin-right: 8px; overflow: visible;">
-                        <svg class="docs-icon" width="30" height="30" viewBox="0 0 30 30">
-                            <style>
-                                @keyframes pageFlip {
-                                    0% { transform: rotate(0deg); opacity: 0.6; }
-                                    25% { transform: rotate(-25deg); opacity: 0.9; }
-                                    50% { transform: rotate(-40deg); opacity: 1; }
-                                    75% { transform: rotate(-25deg); opacity: 0.9; }
-                                    100% { transform: rotate(0deg); opacity: 0.6; }
-                                }
-                                
-                                @keyframes pageFlip2 {
-                                    0% { transform: rotate(0deg); opacity: 0.4; }
-                                    30% { transform: rotate(-15deg); opacity: 0.7; }
-                                    60% { transform: rotate(-30deg); opacity: 0.9; }
-                                    100% { transform: rotate(0deg); opacity: 0.4; }
-                                }
-                                
-                                .doc-base, .doc-fold, .doc-line {
-                                    fill: none;
-                                    stroke: #d1d5db;
-                                    stroke-width: 1.5;
-                                    transition: stroke 0.3s;
-                                }
-                                
-                                .doc-page {
-                                    fill: none;
-                                    stroke: #d1d5db;
-                                    stroke-width: 1.5;
-                                    opacity: 0.6;
-                                    transform-origin: right top;
-                                    transition: stroke 0.3s;
-                                }
-                                
-                                .doc-page-2 {
-                                    fill: none;
-                                    stroke: #d1d5db;
-                                    stroke-width: 1.5;
-                                    opacity: 0.4;
-                                    transform-origin: right top;
-                                    transition: stroke 0.3s;
-                                }
-                                
-                                .docs-link:hover .doc-base, 
-                                .docs-link:hover .doc-fold, 
-                                .docs-link:hover .doc-line,
-                                .docs-link:hover .doc-page,
-                                .docs-link:hover .doc-page-2 {
-                                    stroke: #b45309;
-                                }
-                                
-                                .docs-link:hover .doc-page {
-                                    animation: pageFlip 1.5s infinite;
-                                }
-                                
-                                .docs-link:hover .doc-page-2 {
-                                    animation: pageFlip2 1.8s infinite;
-                                }
-                            </style>
-                            <!-- Base document -->
-                            <path class="doc-base" d="M8,5 v18 a2,2 0 0,0 2,2 h12 a2,2 0 0,0 2,-2 v-15 h-6 v-5 z"></path>
-                            <path class="doc-fold" d="M18,5 v5 h6 l-6,-5"></path>
-                            
-                            <!-- Document lines -->
-                            <line class="doc-line" x1="12" y1="13" x2="20" y2="13"></line>
-                            <line class="doc-line" x1="12" y1="17" x2="20" y2="17"></line>
-                            <line class="doc-line" x1="12" y1="21" x2="18" y2="21"></line>
-                            
-                            <!-- Flipping pages -->
-                            <path class="doc-page" d="M18,5 c0,-1.5 1,-3 3,-3 h5 v6"></path>
-                            <path class="doc-page-2" d="M18,5 c0,-3 2,-4 5,-4 h3 v8"></path>
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
                         </svg>
                     </div>
-                    <span style="font-size: 15px; font-weight: bold; color: #d1d5db; transition: color 0.3s;" 
-                          class="link-text" 
-                          onmouseover="this.style.color='#b45309';" 
-                          onmouseout="this.style.color='#d1d5db';">Documents</span>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
                 </a>
             </div>
         </div>
+        
         <!-- Media content on the right -->
         <div class="md:w-1/2 p-8 flex items-center justify-center">
             <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
@@ -942,490 +856,691 @@
         </div>
     </div>
 </div>
-     <!-- PROJECT_3 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_3</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
-                        </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
-                    </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
-                    </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
+ <!-- PROJECT_3-->
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_3</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
                 </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
                 </div>
-             </div>
-         </div>
-       
-         <!-- PROJECT_4 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_4</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
                         </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
                     </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
                     </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-             </div>
-         </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
         
-      <!-- PROJECT_5 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_5</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
-                        </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
-                    </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
-                    </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- PROJECT_4 -->
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_4</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
                 </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
                 </div>
-             </div>
-         </div>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
+                        </div>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- PROJECT_5 -->
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_5</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
+                </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
+                </div>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
+                        </div>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- PROJECT_6 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_6</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
-                        </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
-                    </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
-                    </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_6</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
                 </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
                 </div>
-             </div>
-         </div>
-        <!-- PROJECT_7 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_7</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
                         </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
                     </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
                     </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-             </div>
-         </div>
-        <!-- PROJECT_8 -->
-        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
-            <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
-                <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8" style="padding: 32px;">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_8</h3>
-                    <p class="text-gray-700 mb-4" style="font-size: 15px;">
-                        A single-player online investigative 3D game where every NPC is powered by advanced AI, 
-                        allowing them to respond dynamically to any question from the player. Interactions can be 
-                        carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
-                    </p>
-                    <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Roles</span>
-                        </div>
-                        <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
-                            <li>Game Design</li>
-                            <li>Level Design</li>
-                            <li>Documentation</li>
-                            <li>Prototype Creation</li>
-                        </ul>
-                    </div>
-                     <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
-                        <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                <path d="M4 22h16"></path>
-                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                            </svg>
-                            <span class="award-title text-gray-700 ml-2">Award Winner</span>
-                        </div>
-                        <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
-                        <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
-                    </div>
-                    <!-- Link alle risorse -->
-                    <div class="mt-6">
-                        <a href="#" class="resource-link" style="display: block; margin-bottom: 10px;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                          <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                        </a>
-                        <a href="#" class="resource-link" style="display: block;">
-                            <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                                <polyline points="10 9 9 9 8 9"></polyline>
-                            </svg>
-                           <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 flex items-center justify-center">
-                    <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
-                        <iframe 
-                            width="100%" 
-                            height="315"
-                            src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
-                            title="YouTube video player"
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-             </div>
-         </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
         
-</section></li>
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- PROJECT_7 -->
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_7</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
+                </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
+                </div>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
+                        </div>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- PROJECT_8 -->
+<div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #070f17; border: 2.2px solid #b45309;">
+    <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
+        <!-- Text content on the left -->
+        <div class="md:w-1/2 p-8" style="padding: 32px;">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROJECT_8</h3>
+            <p class="text-gray-700 mb-4" style="font-size: 15px;">
+                A single-player online investigative 3D game where every NPC is powered by advanced AI, 
+                allowing them to respond dynamically to any question from the player. Interactions can be 
+                carried out via keyboard or microphone, creating a truly immersive and realistic detective experience.
+            </p>
+            <div class="mb-4" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="roles-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Roles</span>
+                </div>
+                <ul class="amber-bullets pl-5 text-gray-700" style="font-size: 15px;">
+                    <li>Game Design</li>
+                    <li>Level Design</li>
+                    <li>Documentation</li>
+                    <li>Prototype Creation</li>
+                </ul>
+            </div>
+            <div class="award-container w-1/2" style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309;">
+                <div class="award-header" style="display: flex; align-items: center; margin-bottom: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                        <path d="M4 22h16"></path>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                    </svg>
+                    <span class="award-title text-gray-700 ml-2">Award Winner</span>
+                </div>
+                <h4 class="font-semibold text-amber" style="font-size: 15px;">Third place at New Game Designer</h4>
+                <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
+            </div>
+            
+            <!-- Link alle risorse con spazio sopra -->
+            <div class="mt-6">
+                <!-- Link per Play Game con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative;">
+                    <!-- Icona Play con sfondo blu -->
+                    <div class="play-icon-container">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                    </div>
+                    
+                    <!-- Animazione Pong senza bordi -->
+                    <div class="pong-animation">
+                        <div class="pong-field">
+                            <div class="pong-paddle1"></div>
+                            <div class="pong-paddle2"></div>
+                            <div class="pong-ball"></div>
+                        </div>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                </a>
+                
+                <!-- Link per Documents con animazione -->
+                <a href="#" class="resource-link" style="display: flex; align-items: center; text-decoration: none; position: relative;">
+                    <!-- Stack di documenti SVG -->
+                    <div class="docs-stack-container">
+                        <!-- Documento in fondo alla pila (appare per secondo) -->
+                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento in mezzo alla pila (appare per primo) -->
+                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                        </svg>
+                        
+                        <!-- Documento principale in cima alla pila (sempre visibile) -->
+                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                            <path d="M14 2 L14 8 L20 8"></path>
+                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+                        </svg>
+                    </div>
+                    
+                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Media content on the right -->
+        <div class="md:w-1/2 p-8 flex items-center justify-center">
+            <div class="video-container" style="border: 2px solid #b45309; background-color: #0a1622; display: flex; justify-content: center; align-items: center; width: 100%; max-width: 100%;">
+                <iframe 
+                    width="100%" 
+                    height="315"
+                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    title="YouTube video player"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</section></lib>     
 
 <!-- Skills Section -->
 <section id="skills" class="py-16">
