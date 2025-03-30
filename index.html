@@ -10,17 +10,21 @@
       <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Righteous&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="stile.css">
     <style>
         :root {
             --primary:  #0a1622; 
+              --font-primary: 'Titillium Web', sans-serif;
+    --font-secondary: 'League Spartan', sans-serif;
+    --font-accent: 'Righteous', cursive;
         }
         
         body {
             background-color: #0a1622; 
-             font-family: 'League Spartan', sans-serif;
+             font-family: 'Titillium Web', sans-serif;
+              font-family: var(--font-primary);
             color: #f3f4f6 !important; /*var(--text-dark);*/
             scroll-behavior: smooth;
         }
@@ -50,24 +54,43 @@
                 -1px 1px 0 #0a1622,
                 1px 1px 0 #0a1622;
                 }
-                h1, h2, h3, h4, h5, h6 {
-            font-family: 'Righteous', cursive;
-        }
-                /* Esempio di utilizzo di pesi diversi per League Spartan */
-        .testo-leggero {
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 300;
-        }
-        
-        .testo-normale {
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 400;
-        }
-        
-        .testo-grassetto {
-            font-family: 'League Spartan', sans-serif;
-            font-weight: 700;
-        }
+
+        h1 {
+    font-family: var(--font-accent);
+}
+     /* Usa Righteous per titoli principali */
+h1, h2 {
+    font-family: 'Righteous', cursive;
+}
+
+/* Usa League Spartan per sottotitoli */
+h3, h4, h5, h6 {
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* Usa Titillium Web per il testo del corpo */
+p, li, a, span, div {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Esempi di utilizzo di pesi diversi */
+.testo-leggero {
+    font-weight: 300;
+}
+
+.testo-normale {
+    font-weight: 400;
+}
+
+.testo-grassetto {
+    font-weight: 700;
+}
+
+/* Esempio di utilizzo del corsivo con Titillium Web */
+.testo-corsivo {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+}
         /* Bordi blu scuro per i titoli principali (più spessi) */
         h1.text-5xl, h2.text-3xl, .section-heading {
             text-shadow: 
