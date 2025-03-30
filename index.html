@@ -797,58 +797,49 @@
                 <p class="text-gray-700" style="font-size: 15px;">Milano - 2022</p>
             </div>
             
-            <!-- Link alle risorse con spazio sopra -->
-              <div class="mt-6 flex flex-col space-y-4">
-                <!-- Link per Play Game con animazione -->
-                <a href="#" class="resource-link" style="display: inline-flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
-                    <!-- Icona Play con sfondo blu -->
-                     <div class="play-icon-container" style="margin-right: 12px;">
-                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                    </div>
-                    
-                    <!-- Animazione Pong senza bordi -->
-                    <div class="pong-animation">
-                        <div class="pong-field">
-                            <div class="pong-paddle1"></div>
-                            <div class="pong-paddle2"></div>
-                            <div class="pong-ball"></div>
-                        </div>
-                    </div>
-                    
-                     <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
-                </a>
-                
-                <!-- Link per Documents con animazione -->
-                <a href="#" class="resource-link" style="display: inline-flex; align-items: center; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
-                    <!-- Stack di documenti SVG -->
-                    <div class="docs-stack-container" style="margin-right: 12px;;">
-                        <!-- Documento in fondo alla pila (appare per secondo) -->
-                        <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                            <path d="M14 2 L14 8 L20 8"></path>
-                        </svg>
-                        
-                        <!-- Documento in mezzo alla pila (appare per primo) -->
-                        <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                            <path d="M14 2 L14 8 L20 8"></path>
-                        </svg>
-                        
-                        <!-- Documento principale in cima alla pila (sempre visibile) -->
-                        <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
-                            <path d="M14 2 L14 8 L20 8"></path>
-                            <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
-                            <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
-                        </svg>
-                    </div>
-                    
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
-                </a>
-            </div>
-        </div>
+          <!-- Link alle risorse con spazio sopra -->
+<div class="mt-6 flex flex-col space-y-4">
+  <!-- Link per Play Game con animazione -->
+  <a href="#" class="resource-link" style="display: inline-flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
+      <!-- Icona Play con rettangolo alla dimensione della freccia -->
+      <div class="play-icon-container" style="margin-right: 12px; position: relative;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #1a365d; border-radius: 4px;"></div>
+          <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: relative; z-index: 1;">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+      </div>
+      
+      <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+  </a>
+  
+  <!-- Link per Documents con animazione -->
+  <a href="#" class="resource-link" style="display: inline-flex; align-items: center; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
+      <!-- Stack di documenti SVG -->
+      <div class="docs-stack-container" style="margin-right: 12px;">
+          <!-- Documento in fondo alla pila (appare per secondo) -->
+          <svg class="doc-svg doc-svg-back-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <path d="M14 2 L14 8 L20 8"></path>
+          </svg>
+          
+          <!-- Documento in mezzo alla pila (appare per primo) -->
+          <svg class="doc-svg doc-svg-back-1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <path d="M14 2 L14 8 L20 8"></path>
+          </svg>
+          
+          <!-- Documento principale in cima alla pila (sempre visibile) -->
+          <svg class="doc-svg doc-svg-main" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+              <path d="M14 2 L14 8 L20 8"></path>
+              <line class="doc-svg-line" x1="8" y1="13" x2="16" y2="13"></line>
+              <line class="doc-svg-line" x1="8" y1="17" x2="16" y2="17"></line>
+          </svg>
+      </div>
+      
+      <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Documents</span>
+  </a>
+</div>
         
         <!-- Media content on the right -->
         <div class="md:w-1/2 p-8 flex items-center justify-center">
