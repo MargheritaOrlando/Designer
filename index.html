@@ -475,6 +475,131 @@
         white-space: nowrap;
         position: relative; /* Aggiunto per posizionamento assoluto di pong-animation */
     }
+
+        /* Stile comune per i contenitori delle icone */
+    .contact-icon-container {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+    }
+    
+    /* ===== ANIMAZIONE EMAIL - BUSTA CHE DIVENTA PAGINA ===== */
+    .email-icon {
+        position: absolute;
+        stroke: #b45309;
+        fill: none;
+        transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transform-origin: center;
+    }
+    
+    .email-page {
+        position: absolute;
+        width: 18px;
+        height: 22px;
+        border: 2px solid #b45309;
+        background-color: #0a1622;
+        border-radius: 1px;
+        transform: scale(0);
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-origin: center;
+    }
+    
+    .email-line {
+        position: absolute;
+        height: 1.5px;
+        background-color: #b45309;
+        left: 3px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        transition-delay: 0.2s;
+    }
+    
+    .email-line-1 {
+        width: 12px;
+        top: 5px;
+    }
+    
+    .email-line-2 {
+        width: 10px;
+        top: 10px;
+    }
+    
+    .email-line-3 {
+        width: 12px;
+        top: 15px;
+    }
+    
+    .email-fold {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 5px 5px 0;
+        border-color: transparent #b45309 transparent transparent;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        transition-delay: 0.2s;
+    }
+    
+    .contact-link:hover .email-icon {
+        transform: rotate(-20deg) scale(0);
+        opacity: 0;
+    }
+    
+    .contact-link:hover .email-page {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .contact-link:hover .email-line,
+    .contact-link:hover .email-fold {
+        opacity: 1;
+    }
+    
+    /* ===== ANIMAZIONE LINKEDIN - ICONA CHE SI MUOVE CON OMBRA ===== */
+    .linkedin-icon {
+        stroke: #b45309;
+        fill: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform-origin: center;
+    }
+    
+    .linkedin-shadow {
+        position: absolute;
+        width: 20px;
+        height: 4px;
+        background-color: rgba(180, 83, 9, 0.2);
+        border-radius: 50%;
+        bottom: 0px;
+        transform: scaleX(0);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .contact-link:hover .linkedin-icon {
+        transform: translateY(-4px);
+        filter: drop-shadow(0 3px 2px rgba(180, 83, 9, 0.3));
+    }
+    
+    .contact-link:hover .linkedin-shadow {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    
+    /* Stile per il contenitore del link */
+    .contact-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        position: relative;
+    }
     </style>
 </head>
 <body class="font-sans">
@@ -692,7 +817,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -806,7 +931,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -920,7 +1045,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1034,7 +1159,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1148,7 +1273,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1262,7 +1387,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1376,7 +1501,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1490,7 +1615,7 @@
                         </div>
                     </div>
                     
-                    <span style="display: inline-block; vertical-align: middle; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
+                    <span style="display: inline; font-size: 15px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Play Game</span>
                 </a>
                 
                 <!-- Link per Documents con animazione -->
@@ -1740,35 +1865,49 @@
                 
             <!-- Combined contact box -->
             <div style="background-color: #0a1622; padding: 12px; border: 2px solid #b45309; width: 25%;">
-                <!-- Email contact -->
+                <!-- Email contact with page animation -->
                 <div class="mb-4">
-                    <a href="mailto:email@example.com" class="block">
-                        <div style="display: flex; align-items: center;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
+                    <a href="mailto:email@example.com" class="contact-link">
+                        <div class="contact-icon-container">
+                            <!-- Icona Email statica -->
+                            <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">email@example.com</span>
+                            
+                            <!-- Pagina che appare -->
+                            <div class="email-page">
+                                <div class="email-line email-line-1"></div>
+                                <div class="email-line email-line-2"></div>
+                                <div class="email-line email-line-3"></div>
+                                <div class="email-fold"></div>
+                            </div>
                         </div>
+                        <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">email@example.com</span>
                     </a>
                 </div>
                 
-                <!-- LinkedIn contact -->
+                <!-- LinkedIn contact with movement animation -->
                 <div>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="block">
-                        <div style="display: flex; align-items: center;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
+                        <div class="contact-icon-container">
+                            <!-- Icona LinkedIn che si muove -->
+                            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                 <rect x="2" y="9" width="4" height="12"></rect>
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
-                            <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">linkedin.com/in/yourprofile</span>
+                            
+                            <!-- Ombra che appare sotto -->
+                            <div class="linkedin-shadow"></div>
                         </div>
+                        <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-300" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">linkedin.com/in/yourprofile</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
