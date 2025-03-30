@@ -201,33 +201,6 @@
             transition: color 0.3s ease;
             white-space: nowrap; /* Impedisce l'a capo del testo */
         }
-        /* Standardize project container heights */
-        .project-media-container {
-            height: 340px; /* Fixed height for all project media containers */
-            overflow: hidden;
-        }
-        
-        .project-content-container {
-            min-height: 420px; /* Minimum height for content side */
-        }
-        
-        /* Make all video containers the same height */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            margin: 20px 0;
-        }
-        
-        /* For placeholder images */
-        .placeholder-image {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-            object-position: center;
-        }
         .resource-link:hover {
         color: #b45309; /* Il testo diventa ambra al passaggio del mouse */
     }
@@ -503,6 +476,21 @@
                             <li>Prototype Creation</li>
                         </ul>
                     </div>
+                     <div class="award-container">
+                        <div class="award-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                            <span class="award-title">Award Winner</span>
+                        </div>
+                        <h4 class="font-semibold text-amber">Third place at New Game Designer</h4>
+                        <p class="text-gray-700">Milano - 2022</p>
+                    </div>
                     <!-- Link alle risorse -->
                     <div class="mt-6">
                         <a href="#" class="resource-link">
@@ -553,7 +541,7 @@
        <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">REYA'S LIGHT</h3>
                     <p class="text-gray-700 mb-4">
                         A 2D online multiplayer hero-shooter platform game. The project won third place at 
@@ -605,10 +593,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                     <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="w-full object-cover">
                     </div>
                         </div>
                 </div>
@@ -619,7 +607,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">SWEET HOME OF MINE</h3>
                     <p class="text-gray-700 mb-4">
                         2D strategic game focused on resource management and base building.
@@ -675,10 +663,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-               <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                        <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Sweet Home of Mine" class="w-full object-cover">
                     </div>
                            </div>
                 </div>
@@ -689,7 +677,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-               <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">NO SIGNAL</h3>
                     <p class="text-gray-700 mb-4">
                         2D platform game with unique signal-based mechanics.
@@ -743,10 +731,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-               <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                     <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                      <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="No Signal" class="w-full object-cover">
                     </div>
                         </div>
                 </div>
@@ -757,7 +745,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-               <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">FELUX</h3>
                     <p class="text-gray-700 mb-4">
                         A 3D physics-based puzzle game focusing on innovative gameplay mechanics.
@@ -793,10 +781,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-               <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                     <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Felux" class="w-full object-cover">
                     </div>
                           </div>
                 </div>
@@ -807,7 +795,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-               <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">NOISY MALL</h3>
                     <p class="text-gray-700 mb-4">
                         A 3D stealth game focused on sound-based interactions, creating a unique gameplay experience.
@@ -843,10 +831,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-               <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                        <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Noisy Mall" class="w-full object-cover">
                     </div>
                            </div>
                 </div>
@@ -858,7 +846,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-               <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">PROCEDURAL</h3>
                     <p class="text-gray-700 mb-4">
                         A 3D stealth game focused on sound-based interactions, creating a unique gameplay experience.
@@ -894,10 +882,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                     <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Noisy Mall" class="w-full object-cover">
                     </div>
                          </div>
                 </div>
@@ -908,7 +896,7 @@
         <div class="shadow-lg rounded-lg overflow-hidden mb-12" style="background-color: #0a1622; border: 2.2px solid #b45309;">
             <div class="flex flex-col md:flex-row" style="border-color: #b45309;">
                 <!-- Text content on the left -->
-                <div class="md:w-1/2 p-8 project-content-container" style="padding: 32px;">
+                <div class="md:w-1/2 p-8" style="padding: 32px;">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">DARK L</h3>
                     <p class="text-gray-700 mb-4">
                         A 3D stealth game focused on sound-based interactions, creating a unique gameplay experience.
@@ -944,10 +932,10 @@
                     </div>
                 </div>
                 <!-- Media content on the right -->
-                <div class="md:w-1/2 p-8 project-media-container">
+                <div class="md:w-1/2 p-8">
                     <div class="space-y-6">
                         <div class="video-container" style="border: 2px solid #b45309;">
-                        <img src="/api/placeholder/600/340" alt="Reya's Light" class="placeholder-image">
+                        <img src="/api/placeholder/600/340" alt="Noisy Mall" class="w-full object-cover">
                     </div>
                 </div>
                     </div>
