@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Margherita Orlando - Quest Designer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+      <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Righteous&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="stile.css">
     <style>
         :root {
             --primary:  #0a1622; 
@@ -15,7 +20,7 @@
         
         body {
             background-color: #0a1622; 
-            font-family: "Righteous", sans-serif;
+             font-family: 'League Spartan', sans-serif;
             color: #f3f4f6 !important; /*var(--text-dark);*/
             scroll-behavior: smooth;
         }
@@ -44,8 +49,25 @@
                 1px -1px 0 #0a1622,
                 -1px 1px 0 #0a1622,
                 1px 1px 0 #0a1622;
+                }
+                h1, h2, h3, h4, h5, h6 {
+            font-family: 'Righteous', cursive;
+        }
+                /* Esempio di utilizzo di pesi diversi per League Spartan */
+        .testo-leggero {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 300;
         }
         
+        .testo-normale {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 400;
+        }
+        
+        .testo-grassetto {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
         /* Bordi blu scuro per i titoli principali (più spessi) */
         h1.text-5xl, h2.text-3xl, .section-heading {
             text-shadow: 
