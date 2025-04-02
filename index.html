@@ -676,6 +676,7 @@ p, li, a, span, div {
         /* Animation for download icon */
 .resource-link:hover .download-icon {
     transform: translateY(-3px);
+    color: #b45309 !important;
 }
 
 .resource-link:hover .download-target {
@@ -710,10 +711,10 @@ p, li, a, span, div {
 .download-btn:hover .download-check {
     animation: pulse 1.5s infinite;
 } 
-        /* Simple up-down animation for the arrow */
+      /* Simple up-down animation for the arrow */
 @keyframes arrowBounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+    50% { transform: translateY(-2px); }
 }
 
 .resource-link:hover .download-arrow {
@@ -1134,10 +1135,10 @@ p, li, a, span, div {
             
             <!-- Link alle risorse con spazio sopra -->
            <div class="mt-6 flex flex-col space-y-4">
-               <a href="ReyasLight.zip" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; text-decoration: none; position: relative; padding: 8px 12px; border-radius: 4px; transition: all 0.3s; background-color: transparent; width: auto; max-width: 100%;">
+               <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
     <!-- Download Icon Container with Simple Animation and Color Change -->
-    <div class="download-icon-container" style="flex-shrink: 0; margin-right: 12px; position: relative;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-icon">
+    <div class="download-icon-container" style="margin-right: 12px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-icon">
             <!-- Base/File path -->
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" class="download-base"></path>
             <!-- Arrow -->
@@ -1148,7 +1149,7 @@ p, li, a, span, div {
         </svg>
     </div>
     
-    <span style="display: inline-block; vertical-align: middle; font-size: 18px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-600" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Download my CV in PDF format</span>
+    <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 18px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-600" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Download CV</span>
 </a>
                 
                 <!-- Link per Play Game con animazione -->
