@@ -740,24 +740,26 @@ p, li, a, span, div {
     </style>
 </head>
 <body class="font-sans">
-    <!-- Navigation text-2xl -->
+ <!-- Navigation -->
     <nav class="fixed w-full z-50 nav-container">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div>
                     <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 19px;">Margherita Orlando - Quest / Game Designer</h1>
                 </div>
+                
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                  
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#projects" class="nav-link">Projects</a>
                     <a href="#skills" class="nav-link">Knowledge & Skills</a>
-                      <a href="#about" class="nav-link">About Me</a>
+                    <a href="#about" class="nav-link">About Me</a>
                     <a href="#contact" class="nav-link">CV & Contacts</a>
                 </div>
+                
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <!-- Mobile menu button -->
-                    <button class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-500 hover:text-gray-800 hover:border-gray-800">
+                    <button id="mobile-menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-500 hover:text-gray-800 hover:border-gray-800">
                         <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
                         </svg>
@@ -766,40 +768,87 @@ p, li, a, span, div {
             </div>
         </div>
     </nav>
-  <!-- Script per l'highlight della navigazione -->
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 mobile-menu opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute right-0 top-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300">
+            <button id="mobile-menu-close" class="absolute top-4 left-4 text-gray-600 hover:text-gray-800">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="flex flex-col mt-16 space-y-4 px-6">
+                <a href="#experience" class="mobile-nav-link text-gray-800 hover:text-gray-600">Experience</a>
+                <a href="#projects" class="mobile-nav-link text-gray-800 hover:text-gray-600">Projects</a>
+                <a href="#skills" class="mobile-nav-link text-gray-800 hover:text-gray-600">Knowledge & Skills</a>
+                <a href="#about" class="mobile-nav-link text-gray-800 hover:text-gray-600">About Me</a>
+                <a href="#contact" class="mobile-nav-link text-gray-800 hover:text-gray-600">CV & Contacts</a>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Ottieni tutti i link di navigazione
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+            // Toggle mobile menu
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.add('opacity-100');
+                mobileMenu.classList.remove('opacity-0');
+                mobileMenu.classList.add('pointer-events-auto');
+                mobileMenu.classList.remove('pointer-events-none');
+                
+                // Slide in the menu
+                mobileMenu.querySelector('div').classList.remove('translate-x-full');
+                mobileMenu.querySelector('div').classList.add('translate-x-0');
+            });
+
+            // Close mobile menu
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+            // Close mobile menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            // Close mobile menu function
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('opacity-100');
+                mobileMenu.classList.add('opacity-0');
+                mobileMenu.classList.remove('pointer-events-auto');
+                mobileMenu.classList.add('pointer-events-none');
+                
+                // Slide out the menu
+                mobileMenu.querySelector('div').classList.add('translate-x-full');
+                mobileMenu.querySelector('div').classList.remove('translate-x-0');
+            }
+
+            // Existing navigation highlight script (from the original document)
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            // Ottieni tutte le sezioni corrispondenti
             const sections = Array.from(navLinks).map(link => {
                 const sectionId = link.getAttribute('href').substring(1);
                 return document.getElementById(sectionId);
             });
             
-            // Funzione per aggiornare la classe attiva in base alla sezione visibile
             function highlightNavigation() {
-                // Ottieni l'altezza della finestra
                 const windowHeight = window.innerHeight;
                 const scrollPosition = window.scrollY;
                 const documentHeight = document.body.scrollHeight;
                 
-                // Gestione speciale per il fondo della pagina (ultima sezione)
                 if (scrollPosition + windowHeight >= documentHeight - 50) {
-                    // Siamo in fondo alla pagina, attiva l'ultimo link
                     navLinks.forEach(link => link.classList.remove('active'));
                     navLinks[navLinks.length - 1].classList.add('active');
                     return;
                 }
                 
-                // Per le altre sezioni, usa un calcolo migliorato
                 let currentSectionIndex = -1;
                 
                 sections.forEach((section, index) => {
                     if (section) {
                         const rect = section.getBoundingClientRect();
-                        // Controlla se almeno il 30% della sezione è visibile nella viewport
                         const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
                         const sectionVisiblePercent = visibleHeight / windowHeight;
                         
@@ -809,20 +858,15 @@ p, li, a, span, div {
                     }
                 });
                 
-                // Aggiorna le classi attive
                 if (currentSectionIndex !== -1) {
                     navLinks.forEach(link => link.classList.remove('active'));
                     navLinks[currentSectionIndex].classList.add('active');
                 }
             }
             
-            // Aggiungi l'evento di scroll per aggiornare la navigazione
             window.addEventListener('scroll', highlightNavigation);
-            
-            // Esegui la funzione anche quando la finestra viene ridimensionata
             window.addEventListener('resize', highlightNavigation);
             
-            // Gestisci anche i click sui link di navigazione per attivare immediatamente
             navLinks.forEach((link, index) => {
                 link.addEventListener('click', function(e) {
                     navLinks.forEach(l => l.classList.remove('active'));
@@ -830,7 +874,6 @@ p, li, a, span, div {
                 });
             });
             
-            // Esegui la funzione anche al caricamento della pagina
             highlightNavigation();
         });
     </script>
