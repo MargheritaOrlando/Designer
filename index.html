@@ -748,11 +748,18 @@ p, li, a, span, div {
         section {
             scroll-margin-top: 80px; /* Adjust based on nav height */
         }
-        /* Active link styling */
+         /* Custom styles for active navigation links */
         .nav-link.active, .mobile-nav-link.active {
-            color: #ff6600; /* Orange color */
-            border-bottom: 2px solid #ff6600; /* Underline effect */
+            text-decoration: underline;
+            text-decoration-color: #f59e0b; /* Amber color */
+            text-underline-offset: 4px;
         }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+   
         /* Hover effect */
         .nav-link:hover, .mobile-nav-link:hover {
             color: #ff6600;
@@ -768,7 +775,7 @@ p, li, a, span, div {
     </style>
 </head>
 <body class="font-sans">
- <!-- Navigation -->
+  <!-- Navigation -->
     <nav id="main-navigation" class="fixed w-full z-50 nav-container bg-white shadow-sm">
         <div class="container mx-auto px-4">
             <div id="nav-content" class="nav-content flex justify-between items-center py-4">
@@ -778,11 +785,11 @@ p, li, a, span, div {
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#skills" class="nav-link">Knowledge & Skills</a>
-                    <a href="#about" class="nav-link">About Me</a>
-                    <a href="#contact" class="nav-link">CV & Contacts</a>
+                    <a href="#experience" class="nav-link hover:text-amber-500">Experience</a>
+                    <a href="#projects" class="nav-link hover:text-amber-500">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-amber-500">Knowledge & Skills</a>
+                    <a href="#about" class="nav-link hover:text-amber-500">About Me</a>
+                    <a href="#contact" class="nav-link hover:text-amber-500">CV & Contacts</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -800,18 +807,48 @@ p, li, a, span, div {
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 mobile-menu opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="absolute right-0 top-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300">
-            <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-            <div class="flex flex-col mt-16 space-y-4 px-6">
-                <a href="#experience" class="mobile-nav-link text-gray-800 hover:text-gray-600">Experience</a>
-                <a href="#projects" class="mobile-nav-link text-gray-800 hover:text-gray-600">Projects</a>
-                <a href="#skills" class="mobile-nav-link text-gray-800 hover:text-gray-600">Knowledge & Skills</a>
-                <a href="#about" class="mobile-nav-link text-gray-800 hover:text-gray-600">About Me</a>
-                <a href="#contact" class="mobile-nav-link text-gray-800 hover:text-gray-600">CV & Contacts</a>
+            <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-lg font-bold text-gray-800">Sections</h2>
+                <button id="mobile-menu-close" class="text-gray-600 hover:text-gray-800">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
+            <div class="flex flex-col mt-4 space-y-4 px-6">
+                <a href="#experience" class="mobile-nav-link text-gray-800 hover:text-amber-500 py-2">Experience</a>
+                <a href="#projects" class="mobile-nav-link text-gray-800 hover:text-amber-500 py-2">Projects</a>
+                <a href="#skills" class="mobile-nav-link text-gray-800 hover:text-amber-500 py-2">Knowledge & Skills</a>
+                <a href="#about" class="mobile-nav-link text-gray-800 hover:text-amber-500 py-2">About Me</a>
+                <a href="#contact" class="mobile-nav-link text-gray-800 hover:text-amber-500 py-2">CV & Contacts</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Placeholder Sections for Demonstration -->
+    <div id="experience" class="min-h-screen pt-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold">Experience Section</h2>
+        </div>
+    </div>
+    <div id="projects" class="min-h-screen pt-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold">Projects Section</h2>
+        </div>
+    </div>
+    <div id="skills" class="min-h-screen pt-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold">Knowledge & Skills Section</h2>
+        </div>
+    </div>
+    <div id="about" class="min-h-screen pt-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold">About Me Section</h2>
+        </div>
+    </div>
+    <div id="contact" class="min-h-screen pt-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold">CV & Contacts Section</h2>
         </div>
     </div>
 
