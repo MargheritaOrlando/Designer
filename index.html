@@ -703,45 +703,74 @@ p, li, a, span, div {
             </div>
         </div>
     </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Ottieni tutti i link di navigazione
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        // Ottieni tutte le sezioni corrispondenti
-        const sections = Array.from(navLinks).map(link => {
-            const sectionId = link.getAttribute('href').substring(1);
-            return document.getElementById(sectionId);
-        });
-        
-        // Funzione per aggiornare la classe attiva in base alla sezione visibile
-        function highlightNavigation() {
-            const scrollPosition = window.scrollY;
+  <!-- Script per l'highlight della navigazione -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ottieni tutti i link di navigazione
+            const navLinks = document.querySelectorAll('.nav-link');
             
-            // Trova la sezione attualmente visibile
-            sections.forEach((section, index) => {
-                if (section) {
-                    const sectionTop = section.offsetTop - 100; // Aggiunto un offset per far attivare prima
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        // Rimuovi la classe attiva da tutti i link
-                        navLinks.forEach(link => link.classList.remove('active'));
-                        
-                        // Aggiungi la classe attiva al link corrispondente
-                        navLinks[index].classList.add('active');
-                    }
-                }
+            // Ottieni tutte le sezioni corrispondenti
+            const sections = Array.from(navLinks).map(link => {
+                const sectionId = link.getAttribute('href').substring(1);
+                return document.getElementById(sectionId);
             });
-        }
-        
-        // Aggiungi l'evento di scroll per aggiornare la navigazione
-        window.addEventListener('scroll', highlightNavigation);
-        
-        // Esegui la funzione anche al caricamento della pagina
-        highlightNavigation();
-    });
-</script>
+            
+            // Funzione per aggiornare la classe attiva in base alla sezione visibile
+            function highlightNavigation() {
+                // Ottieni l'altezza della finestra
+                const windowHeight = window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const documentHeight = document.body.scrollHeight;
+                
+                // Gestione speciale per il fondo della pagina (ultima sezione)
+                if (scrollPosition + windowHeight >= documentHeight - 50) {
+                    // Siamo in fondo alla pagina, attiva l'ultimo link
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[navLinks.length - 1].classList.add('active');
+                    return;
+                }
+                
+                // Per le altre sezioni, usa un calcolo migliorato
+                let currentSectionIndex = -1;
+                
+                sections.forEach((section, index) => {
+                    if (section) {
+                        const rect = section.getBoundingClientRect();
+                        // Controlla se almeno il 30% della sezione è visibile nella viewport
+                        const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+                        const sectionVisiblePercent = visibleHeight / windowHeight;
+                        
+                        if (rect.top <= windowHeight * 0.3 && rect.bottom >= 0 && sectionVisiblePercent > 0.1) {
+                            currentSectionIndex = index;
+                        }
+                    }
+                });
+                
+                // Aggiorna le classi attive
+                if (currentSectionIndex !== -1) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    navLinks[currentSectionIndex].classList.add('active');
+                }
+            }
+            
+            // Aggiungi l'evento di scroll per aggiornare la navigazione
+            window.addEventListener('scroll', highlightNavigation);
+            
+            // Esegui la funzione anche quando la finestra viene ridimensionata
+            window.addEventListener('resize', highlightNavigation);
+            
+            // Gestisci anche i click sui link di navigazione per attivare immediatamente
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', function(e) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Esegui la funzione anche al caricamento della pagina
+            highlightNavigation();
+        });
+    </script>
     <!-- Header con testo bordato usando stili inline -->
     <header class="pt-24 pb-12 text-gray-600 relative flex items-center justify-center" style="min-height: 600px;">
       <!-- Background image with overlay -->
@@ -1905,7 +1934,7 @@ Currently, I'm working as Quest Designer on an open-world RPG based on the iconi
     </div>
 </section>
 <!-- Contact Section -->
-<section id="contact" class="py-16 bg-gray-900">
+<section id="contact" class="py-16 bg-gray-900" style="min-height: 100vh;">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-gray-600 mb-10 section-heading">Contact Me</h2>
         
