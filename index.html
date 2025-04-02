@@ -737,10 +737,22 @@ p, li, a, span, div {
         width: 100%;
     }
 }
+        .mobile-nav-link {
+            transition: all 0.3s ease;
+            padding: 10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        .mobile-nav-link.active {
+            color: #1a73e8; /* A more visible active color */
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body class="font-sans">
- <!-- Navigation -->
+  <!-- Navigation -->
     <nav class="fixed w-full z-50 nav-container">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -777,7 +789,7 @@ p, li, a, span, div {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-            <div class="flex flex-col mt-16 space-y-4 px-6">
+            <div class="flex flex-col mt-24 space-y-4 px-6">
                 <a href="#experience" class="mobile-nav-link text-gray-800 hover:text-gray-600">Experience</a>
                 <a href="#projects" class="mobile-nav-link text-gray-800 hover:text-gray-600">Projects</a>
                 <a href="#skills" class="mobile-nav-link text-gray-800 hover:text-gray-600">Knowledge & Skills</a>
@@ -811,7 +823,15 @@ p, li, a, span, div {
 
             // Close mobile menu when a link is clicked
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
+                link.addEventListener('click', function(e) {
+                    closeMobileMenu();
+                    
+                    // Remove active class from all mobile nav links
+                    mobileNavLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                });
             });
 
             // Close mobile menu function
@@ -826,8 +846,9 @@ p, li, a, span, div {
                 mobileMenu.querySelector('div').classList.remove('translate-x-0');
             }
 
-            // Existing navigation highlight script (from the original document)
+            // Existing navigation highlight script
             const navLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
             const sections = Array.from(navLinks).map(link => {
                 const sectionId = link.getAttribute('href').substring(1);
                 return document.getElementById(sectionId);
@@ -840,7 +861,10 @@ p, li, a, span, div {
                 
                 if (scrollPosition + windowHeight >= documentHeight - 50) {
                     navLinks.forEach(link => link.classList.remove('active'));
+                    mobileNavLinks.forEach(link => link.classList.remove('active'));
+                    
                     navLinks[navLinks.length - 1].classList.add('active');
+                    mobileNavLinks[mobileNavLinks.length - 1].classList.add('active');
                     return;
                 }
                 
@@ -860,7 +884,10 @@ p, li, a, span, div {
                 
                 if (currentSectionIndex !== -1) {
                     navLinks.forEach(link => link.classList.remove('active'));
+                    mobileNavLinks.forEach(link => link.classList.remove('active'));
+                    
                     navLinks[currentSectionIndex].classList.add('active');
+                    mobileNavLinks[currentSectionIndex].classList.add('active');
                 }
             }
             
@@ -870,7 +897,10 @@ p, li, a, span, div {
             navLinks.forEach((link, index) => {
                 link.addEventListener('click', function(e) {
                     navLinks.forEach(l => l.classList.remove('active'));
+                    mobileNavLinks.forEach(l => l.classList.remove('active'));
+                    
                     this.classList.add('active');
+                    mobileNavLinks[index].classList.add('active');
                 });
             });
             
