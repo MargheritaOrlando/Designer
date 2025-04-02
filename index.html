@@ -737,11 +737,31 @@ p, li, a, span, div {
         width: 100%;
     }
 }
+         .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        /* Ensure content doesn't get hidden behind fixed nav */
+        section {
+            scroll-margin-top: 80px; /* Adjust based on nav height */
+        }
+        /* Active link styling */
+        .nav-link.active, .mobile-nav-link.active {
+            color: #ff6600; /* Orange color */
+            font-weight: bold;
+        }
+        /* Hide navigation when mobile menu is open */
+        .nav-container.hidden {
+            display: none;
+        }
     </style>
 </head>
 <body class="font-sans">
  <!-- Navigation -->
-    <nav class="fixed w-full z-50 nav-container">
+    <nav id="main-navigation" class="fixed w-full z-50 nav-container bg-white shadow-sm">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div>
@@ -772,7 +792,7 @@ p, li, a, span, div {
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 mobile-menu opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="absolute right-0 top-0 w-64 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300">
-            <button id="mobile-menu-close" class="absolute top-4 left-4 text-gray-600 hover:text-gray-800">
+            <button id="mobile-menu-close" class="absolute top-4 right-4 text-gray-600 hover:text-gray-800">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
@@ -792,10 +812,15 @@ p, li, a, span, div {
             const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
             const mobileMenu = document.getElementById('mobile-menu');
+            const mainNavigation = document.getElementById('main-navigation');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
             // Toggle mobile menu
             mobileMenuToggle.addEventListener('click', function() {
+                // Hide main navigation
+                mainNavigation.classList.add('hidden');
+
+                // Show mobile menu
                 mobileMenu.classList.add('opacity-100');
                 mobileMenu.classList.remove('opacity-0');
                 mobileMenu.classList.add('pointer-events-auto');
@@ -811,11 +836,24 @@ p, li, a, span, div {
 
             // Close mobile menu when a link is clicked
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
+                link.addEventListener('click', function(e) {
+                    closeMobileMenu();
+                    // Smooth scroll to section
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
 
             // Close mobile menu function
             function closeMobileMenu() {
+                // Show main navigation again
+                mainNavigation.classList.remove('hidden');
+
+                // Hide mobile menu
                 mobileMenu.classList.remove('opacity-100');
                 mobileMenu.classList.add('opacity-0');
                 mobileMenu.classList.remove('pointer-events-auto');
@@ -826,9 +864,10 @@ p, li, a, span, div {
                 mobileMenu.querySelector('div').classList.remove('translate-x-0');
             }
 
-            // Existing navigation highlight script (from the original document)
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = Array.from(navLinks).map(link => {
+            // Navigation highlight logic
+            const desktopNavLinks = document.querySelectorAll('.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const sections = Array.from(desktopNavLinks).map(link => {
                 const sectionId = link.getAttribute('href').substring(1);
                 return document.getElementById(sectionId);
             });
@@ -839,8 +878,8 @@ p, li, a, span, div {
                 const documentHeight = document.body.scrollHeight;
                 
                 if (scrollPosition + windowHeight >= documentHeight - 50) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    navLinks[navLinks.length - 1].classList.add('active');
+                    // At the bottom of the page
+                    updateActiveLinks(desktopNavLinks, mobileNavLinks, sections.length - 1);
                     return;
                 }
                 
@@ -859,21 +898,22 @@ p, li, a, span, div {
                 });
                 
                 if (currentSectionIndex !== -1) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    navLinks[currentSectionIndex].classList.add('active');
+                    updateActiveLinks(desktopNavLinks, mobileNavLinks, currentSectionIndex);
                 }
+            }
+            
+            function updateActiveLinks(desktopLinks, mobileLinks, activeIndex) {
+                desktopLinks.forEach(link => link.classList.remove('active'));
+                mobileLinks.forEach(link => link.classList.remove('active'));
+                
+                desktopLinks[activeIndex].classList.add('active');
+                mobileLinks[activeIndex].classList.add('active');
             }
             
             window.addEventListener('scroll', highlightNavigation);
             window.addEventListener('resize', highlightNavigation);
             
-            navLinks.forEach((link, index) => {
-                link.addEventListener('click', function(e) {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-            
+            // Initial highlight
             highlightNavigation();
         });
     </script>
