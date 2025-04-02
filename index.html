@@ -710,6 +710,36 @@ p, li, a, span, div {
 .download-btn:hover .download-check {
     animation: pulse 1.5s infinite;
 } 
+        /* Simple up-down animation for the arrow */
+@keyframes arrowBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+.resource-link:hover .download-arrow {
+    animation: arrowBounce 1s ease-in-out infinite;
+}
+
+/* Hover effect for the entire button */
+.resource-link:hover {
+    background-color: rgba(180, 83, 9, 0.1); /* Subtle amber background on hover */
+}
+
+/* Ensure elements are properly positioned */
+.download-icon-container {
+    display: inline-block;
+}
+
+.download-icon {
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .resource-link {
+        width: 100%;
+    }
+}
     </style>
 </head>
 <body class="font-sans">
@@ -1918,23 +1948,17 @@ p, li, a, span, div {
                 <div style="background-color: #0a1622; padding: 24px; border: 1px solid #b45309; height: 100%;">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-6">Curriculum Vitae</h3>
                     
-                  <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link download-btn" style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: 100%; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
-    <!-- Download Icon Container with Enhanced Animation -->
-    <div class="download-icon-wrapper" style="position: relative; width: 24px; height: 24px; flex-shrink: 0; margin-right: 12px; overflow: hidden;">
-        <!-- Arrow icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-arrow" style="position: absolute; top: 0; left: 0; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);">
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="3" x2="12" y2="15"></line>
-        </svg>
-        
-        <!-- Target/file icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-file" style="position: absolute; top: 0; left: 0; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); opacity: 1;">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-        </svg>
-        
-        <!-- Success checkmark (hidden initially) -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-check" style="position: absolute; top: 0; left: 0; transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); opacity: 0; transform: scale(0.5);">
-            <polyline points="20 6 9 17 4 12"></polyline>
+                 <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; flex-wrap: wrap; margin-bottom: 10px; text-decoration: none; position: relative; padding: 8px 12px; border-radius: 4px; transition: all 0.3s; border: 1px solid #b45309; background-color: #0a1622; width: auto; max-width: 100%;">
+    <!-- Download Icon Container with Simple Animation -->
+    <div class="download-icon-container" style="flex-shrink: 0; margin-right: 12px; position: relative;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-icon">
+            <!-- Base/File path -->
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" class="download-base"></path>
+            <!-- Arrow -->
+            <g class="download-arrow">
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </g>
         </svg>
     </div>
     
