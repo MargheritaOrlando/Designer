@@ -673,7 +673,14 @@ p, li, a, span, div {
             font-weight: 400;
             font-style: normal;
         }
-        
+        /* Animation for download icon */
+.resource-link:hover .download-icon {
+    transform: translateY(-3px);
+}
+
+.resource-link:hover .download-target {
+    transform: translateY(3px);
+}
        
     </style>
 </head>
@@ -1883,14 +1890,24 @@ p, li, a, span, div {
                 <div style="background-color: #0a1622; padding: 24px; border: 1px solid #b45309; height: 100%;">
                     <h3 class="text-2xl font-semibold text-gray-600 mb-6">Curriculum Vitae</h3>
                     
-                    <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link" style="display: inline-flex; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: fit-content; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        <span style="display: inline-block; vertical-align: middle; margin-left: 12px; font-size: 18px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-600" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Download my CV in PDF format</span>
-                    </a>
+                   <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link" style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: 100%; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
+                       <a href="CV_MargheritaOrlando.pdf" target="_blank" class="resource-link" style="display: flex; flex-wrap: wrap; align-items: center; margin-bottom: 10px; text-decoration: none; position: relative; width: 100%; padding: 8px; border-radius: 4px; transition: background-color 0.3s;">
+    <!-- Download Icon Container with Animation -->
+    <div class="download-icon-container" style="position: relative; width: 24px; height: 24px; flex-shrink: 0; margin-right: 12px;">
+        <!-- Static arrow part -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-icon" style="position: absolute; top: 0; left: 0; transition: all 0.3s ease;">
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        
+        <!-- Moving target part (file) that animates up and down -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="download-target" style="position: absolute; top: 0; left: 0; transition: all 0.3s ease;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        </svg>
+    </div>
+    
+    <span style="display: inline-block; vertical-align: middle; font-size: 18px; font-weight: bold; transition: color 0.3s;" class="award-title text-gray-600" onmouseover="this.style.color='#b45309';" onmouseout="this.style.color='#d1d5db';">Download my CV in PDF format</span>
+</a>
                 </div>
             </div>
             
