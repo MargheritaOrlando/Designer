@@ -239,12 +239,17 @@ p, li, a, span, div {
         scroll-margin-top: 80px;
           }
 
-        #mobile-menu-toggle:focus {
+       #mobile-menu-toggle:focus {
             outline: none;
+            background-color: transparent;
         }
         
         #mobile-menu-toggle:active {
-            background-color: transparent;
+            background-color: transparent !important;
+        }
+        
+        #mobile-menu-toggle {
+            -webkit-tap-highlight-color: transparent;
         }
         .award-title {
             color: #e2e8f0;
@@ -829,7 +834,7 @@ p, li, a, span, div {
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-           // Toggle mobile menu
+          // Toggle mobile menu
             mobileMenuToggle.addEventListener('click', function() {
                 const isOpen = mobileMenu.classList.contains('opacity-100');
                 
@@ -845,7 +850,10 @@ p, li, a, span, div {
                     mobileMenu.querySelector('div').classList.remove('translate-x-full');
                     mobileMenu.querySelector('div').classList.add('translate-x-0');
                 }
-               this.blur();
+                
+                setTimeout(() => {
+                    this.blur();
+                }, 100);
             });
 
             // Close mobile menu
