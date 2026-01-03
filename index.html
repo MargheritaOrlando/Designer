@@ -818,9 +818,10 @@ p, li, a, span, div {
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div
-            class="absolute shadow-lg transform translate-y-full bottom-0 left-0 w-full transition-transform duration-300"
-            style="background-color:#0a1622; border-left:1px solid #b45309; padding-top:80px;">
+       <div
+            class="absolute top-full left-0 w-full shadow-lg transform -translate-y-full transition-transform duration-300"
+            style="background-color:#0a1622; border-top:1px solid #b45309; padding-top:32px; padding-bottom:32px;">
+
     
             <button id="mobile-menu-close"
                 class="absolute top-4 left-4 text-gray-400 hover:text-white">
@@ -863,9 +864,8 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
             mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
 
-            menuPanel.classList.remove('translate-y-full');
+           menuPanel.classList.remove('-translate-y-full');
             menuPanel.classList.add('translate-y-0');
-
 
             mobileMenuToggle.classList.remove('text-white');
             mobileMenuToggle.classList.add('text-gray-600');
@@ -881,9 +881,8 @@ document.addEventListener('DOMContentLoaded', function () {
         mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
         mobileMenu.classList.add('opacity-0', 'pointer-events-none');
 
-        menuPanel.classList.add('translate-y-full');
+       menuPanel.classList.add('-translate-y-full');
         menuPanel.classList.remove('translate-y-0');
-
 
         mobileMenuToggle.classList.remove('text-gray-600');
         mobileMenuToggle.classList.add('text-white');
