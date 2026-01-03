@@ -206,7 +206,7 @@ p, li, a, span, div {
             margin-bottom: 0.5rem;
         }
         
-        .mobile-nav-link {
+       .mobile-nav-link {
             position: relative;
             padding-bottom: 8px;
             display: inline-block;
@@ -217,14 +217,19 @@ p, li, a, span, div {
             font-weight: bold;
         }
         
-        .mobile-nav-link.active::after {
+        .mobile-nav-link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 0;
             height: 2px;
             background-color: #b45309;
+            transition: width 0.3s ease;
+        }
+        
+        .mobile-nav-link.active::after {
+            width: 100%;
         }
                 .award-header svg {
             margin-right: 8px;
