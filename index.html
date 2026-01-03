@@ -785,9 +785,11 @@ p, li, a, span, div {
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <div>
-                    <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 19px;">Margherita Orlando - Game Designer</h1>
+                    <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 19px;">
+                        Margherita Orlando - Game Designer
+                    </h1>
                 </div>
-                
+    
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#experience" class="nav-link">Experience</a>
@@ -796,29 +798,41 @@ p, li, a, span, div {
                     <a href="#about" class="nav-link">About Me</a>
                     <a href="#contact" class="nav-link">CV & Contacts</a>
                 </div>
-                
+    
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-toggle" class="flex items-center px-3 py-2 border rounded text-gray-600 border-gray-500 hover:text-gray-800 hover:border-gray-800">
+                    <button
+                        id="mobile-menu-toggle"
+                        class="flex items-center px-3 py-2 border rounded border-gray-500 text-white transition-colors">
                         <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
-
+    
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-40 mobile-menu opacity-0 pointer-events-none transition-opacity duration-300">
-       <div class="absolute right-0 top-0 w-80 shadow-lg transform translate-x-full transition-transform duration-300" style="background-color: #0a1622; border-left: 1px solid #b45309; padding-top: 80px;">
-            <button id="mobile-menu-close" class="absolute top-4 left-4 text-gray-600 hover:text-gray-800">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div
+            class="absolute right-0 top-0 w-80 shadow-lg transform translate-x-full transition-transform duration-300"
+            style="background-color:#0a1622; border-left:1px solid #b45309; padding-top:80px;">
+    
+            <button id="mobile-menu-close"
+                class="absolute top-4 left-4 text-gray-400 hover:text-white">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
-          <div class="flex flex-col mt-4 space-y-4 px-6" style="align-items: flex-start;">
-               <a href="#experience" class="mobile-nav-link text-gray-200 hover:text-amber">Experience</a>
+    
+            <div class="flex flex-col mt-4 space-y-4 px-6 items-start">
+                <a href="#experience" class="mobile-nav-link text-gray-200 hover:text-amber">Experience</a>
                 <a href="#projects" class="mobile-nav-link text-gray-200 hover:text-amber">Projects</a>
                 <a href="#skills" class="mobile-nav-link text-gray-200 hover:text-amber">Knowledge & Skills</a>
                 <a href="#about" class="mobile-nav-link text-gray-200 hover:text-amber">About Me</a>
@@ -826,113 +840,55 @@ p, li, a, span, div {
             </div>
         </div>
     </div>
-
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-          // Toggle mobile menu
-            mobileMenuToggle.addEventListener('click', function() {
-                const isOpen = mobileMenu.classList.contains('opacity-100');
-                
-                if (isOpen) {
-                    closeMobileMenu();
-                } else {
-                    mobileMenu.classList.add('opacity-100');
-                    mobileMenu.classList.remove('opacity-0');
-                    mobileMenu.classList.add('pointer-events-auto');
-                    mobileMenu.classList.remove('pointer-events-none');
-                    
-                    // Slide in the menu
-                    mobileMenu.querySelector('div').classList.remove('translate-x-full');
-                    mobileMenu.querySelector('div').classList.add('translate-x-0');
-                }
-                
-                setTimeout(() => {
-                    this.blur();
-                }, 100);
-            });
-
-            // Close mobile menu
-            mobileMenuClose.addEventListener('click', closeMobileMenu);
-
-            // Close mobile menu when a link is clicked
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
-            });
-
-            // Close mobile menu function
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('opacity-100');
-                mobileMenu.classList.add('opacity-0');
-                mobileMenu.classList.remove('pointer-events-auto');
-                mobileMenu.classList.add('pointer-events-none');
-                
-                // Slide out the menu
-                mobileMenu.querySelector('div').classList.add('translate-x-full');
-                mobileMenu.querySelector('div').classList.remove('translate-x-0');
-                
-                // Remove focus from toggle button
-                mobileMenuToggle.blur();
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        const menuPanel = mobileMenu.querySelector('div');
+    
+        // Toggle menu
+        mobileMenuToggle.addEventListener('click', function () {
+            const isOpen = mobileMenu.classList.contains('opacity-100');
+    
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+    
+                menuPanel.classList.remove('translate-x-full');
+                menuPanel.classList.add('translate-x-0');
+    
+                // icona NON bianca quando menu aperto
+                mobileMenuToggle.classList.remove('text-white');
+                mobileMenuToggle.classList.add('text-gray-600');
             }
-
-            // Existing navigation highlight script (from the original document)
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = Array.from(navLinks).map(link => {
-                const sectionId = link.getAttribute('href').substring(1);
-                return document.getElementById(sectionId);
-            });
-            
-            function highlightNavigation() {
-                const windowHeight = window.innerHeight;
-                const scrollPosition = window.scrollY;
-                const documentHeight = document.body.scrollHeight;
-                
-                if (scrollPosition + windowHeight >= documentHeight - 50) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    mobileNavLinks.forEach(link => link.classList.remove('active'));
-                    navLinks[navLinks.length - 1].classList.add('active');
-                    mobileNavLinks[mobileNavLinks.length - 1].classList.add('active');
-                    return;
-                }
-                
-                let currentSectionIndex = -1;
-                
-                sections.forEach((section, index) => {
-                    if (section) {
-                        const rect = section.getBoundingClientRect();
-                        const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-                        const sectionVisiblePercent = visibleHeight / windowHeight;
-                        
-                        if (rect.top <= windowHeight * 0.3 && rect.bottom >= 0 && sectionVisiblePercent > 0.1) {
-                            currentSectionIndex = index;
-                        }
-                    }
-                });
-                
-                if (currentSectionIndex !== -1) {
-                    navLinks.forEach(link => link.classList.remove('active'));
-                    mobileNavLinks.forEach(link => link.classList.remove('active'));
-                    navLinks[currentSectionIndex].classList.add('active');
-                    mobileNavLinks[currentSectionIndex].classList.add('active');
-                }
-            }
-            
-            window.addEventListener('scroll', highlightNavigation);
-            window.addEventListener('resize', highlightNavigation);
-            
-            navLinks.forEach((link, index) => {
-                link.addEventListener('click', function(e) {
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-                });
-            });
-            
-            highlightNavigation();
+    
+            setTimeout(() => this.blur(), 100);
         });
+    
+        // Close menu
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+    
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+    
+            menuPanel.classList.add('translate-x-full');
+            menuPanel.classList.remove('translate-x-0');
+    
+            // icona torna bianca
+            mobileMenuToggle.classList.remove('text-gray-600');
+            mobileMenuToggle.classList.add('text-white');
+    
+            mobileMenuToggle.blur();
+        }
+    });
+
     </script>
     <!-- Header con testo bordato usando stili inline -->
     <header class="pt-24 pb-12 text-gray-600 relative flex items-center justify-center" style="min-height: 600px;">
