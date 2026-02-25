@@ -1,5 +1,3 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Margherita Orlando - Game Designer</title> <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="styles
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,6 +139,7 @@ p, li, a, span, div {
             color: #f3f4f6;
             font-weight: 500;
             transition: all 0.3s ease;
+            font-size: 16px;
         }
         
         .nav-link:after {
@@ -385,7 +384,7 @@ p, li, a, span, div {
         }
         .nav-container {
             backdrop-filter: blur(10px);
-            background-color: rgba(7, 15, 23, 0.85); /* #070f17 con 85% opacità */
+            background-color: rgba(7, 15, 23, 0.95); /* #070f17 con 95% opacità */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         /* Custom styling for sections */
@@ -777,21 +776,52 @@ p, li, a, span, div {
         width: 100%;
     }
 }
+
+/* Stili aggiuntivi per la barra di navigazione desktop */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-title {
+    flex-shrink: 0;
+    padding-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 16px;
+    }
+    
+    .nav-link {
+        font-size: 15px;
+    }
+}
     </style>
 </head>
 <body class="font-sans">
 <!-- Navigation -->
 <nav class="fixed w-full z-50 nav-container">
     <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-            <div>
-                <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 19px;">
-                    Margherita Orlando - Game Designer
+        <div class="nav-wrapper">
+            <div class="nav-title">
+                <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 16px;">
+                    Margherita Orlando
                 </h1>
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
+            <div class="nav-links">
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Knowledge & Skills</a>
@@ -800,7 +830,7 @@ p, li, a, span, div {
             </div>
 
             <!-- Mobile Menu Button -->
-            <div class="md:hidden">
+            <div class="md:hidden flex-shrink-0">
                 <button
                     id="mobile-menu-toggle"
                     class="flex items-center px-3 py-2 border rounded border-gray-500 text-white transition-colors">
@@ -895,6 +925,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ========================= */
 
     const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinksArray = Array.from(mobileNavLinks);
     const sections = Array.from(navLinks).map(link => {
         const id = link.getAttribute('href').substring(1);
         return document.getElementById(id);
@@ -907,9 +938,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (scrollPosition + windowHeight >= documentHeight - 50) {
             navLinks.forEach(l => l.classList.remove('active'));
-            mobileNavLinks.forEach(l => l.classList.remove('active'));
+            mobileNavLinksArray.forEach(l => l.classList.remove('active'));
             navLinks[navLinks.length - 1].classList.add('active');
-            mobileNavLinks[mobileNavLinks.length - 1].classList.add('active');
+            mobileNavLinksArray[mobileNavLinksArray.length - 1].classList.add('active');
             return;
         }
 
@@ -929,10 +960,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (currentIndex !== -1) {
             navLinks.forEach(l => l.classList.remove('active'));
-            mobileNavLinks.forEach(l => l.classList.remove('active'));
+            mobileNavLinksArray.forEach(l => l.classList.remove('active'));
 
             navLinks[currentIndex].classList.add('active');
-            mobileNavLinks[currentIndex].classList.add('active');
+            mobileNavLinksArray[currentIndex].classList.add('active');
         }
     }
 
@@ -987,7 +1018,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <h3 class="text-2xl font-semibold text-gray-800 mb-2">Terminator: Survivors</h3>
                     <h4 class="text-xl text-amber mb-4">Nacon Studio Milan</h4>
                     <p class="text-gray-600 mb-4" style="font-size: 18px;">
-            <I>"Play as a survivor in an open world set after Judgment Day where you, alone or in co-op, scavenge resources to build a base of operations for mankind. But you’re not alone. Skynet’s machines hunt you down as well as rival human factions."</i><br><br>
+            <I>"Play as a survivor in an open world set after Judgment Day where you, alone or in co-op, scavenge resources to build a base of operations for mankind. But you're not alone. Skynet's machines hunt you down as well as rival human factions."</i><br><br>
                         Working on this major IP has allowed me to develop quests within a globally recognized franchise, addressing the technical challenges of implementing narrative content in an expansive open-world environment.
                     </p>
                         <ul class="amber-bullets pl-5 text-gray-600" style="font-size: 17px;">
@@ -1877,7 +1908,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 
-        </section></lib>
+        </section>
 <!-- Skills Section -->
 <section id="skills" class="py-16">
     <div class="container mx-auto px-4">
