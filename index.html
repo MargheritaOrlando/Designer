@@ -931,7 +931,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentIndex = index;
             }
         });
-
+        // Se sei in cima alla pagina, non attivare nessun link
+        if (scrollPosition < 100) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            mobileNavLinks.forEach(l => l.classList.remove('active'));
+            return;
+        }
         if (currentIndex !== -1) {
             navLinks.forEach(l => l.classList.remove('active'));
             mobileNavLinks.forEach(l => l.classList.remove('active'));
