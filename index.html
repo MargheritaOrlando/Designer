@@ -777,7 +777,18 @@ p, li, a, span, div {
         width: 100%;
     }
 }
+/* Force desktop navigation visibility */
+@media (min-width: 768px) {
+    .nav-container > div > div:nth-child(2) {
+        display: flex !important;
+    }
+}
 
+@media (max-width: 767px) {
+    .nav-container > div > div:nth-child(2) {
+        display: none !important;
+    }
+}
     </style>
 </head>
 <body class="font-sans">
