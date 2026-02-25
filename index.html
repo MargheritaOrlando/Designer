@@ -781,16 +781,16 @@ p, li, a, span, div {
 <body class="font-sans">
 <!-- Navigation -->
 <nav class="fixed w-full z-50 nav-container">
-    <div class="w-full px-8">
-        <div class="flex justify-between items-center py-4">
-            <div class="flex-shrink-0">
-                <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 18px;">
+    <div class="w-full" style="padding-left: 2rem; padding-right: 2rem; padding-top: 1rem; padding-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex-shrink: 0; margin-right: 3rem;">
+                <h1 class="League Spartan-regular font-bold text-gray-800" style="font-size: 16px; white-space: nowrap;">
                     Margherita Orlando - Game Designer
                 </h1>
             </div>
 
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
+            <div style="display: none; gap: 2rem;" class="md:flex">
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Knowledge & Skills</a>
@@ -813,6 +813,14 @@ p, li, a, span, div {
         </div>
     </div>
 </nav>
+
+<style>
+@media (min-width: 768px) {
+    .nav-container div > div > div:nth-child(2) {
+        display: flex !important;
+    }
+}
+</style>
 
 <!-- Mobile Menu Overlay -->
 <div id="mobile-menu"
