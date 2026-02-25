@@ -905,12 +905,19 @@ document.addEventListener('DOMContentLoaded', function () {
         return document.getElementById(id);
     });
 
-    function highlightNavigation() {
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.scrollY;
-        const documentHeight = document.body.scrollHeight;
+   function highlightNavigation() {
+    const windowHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const documentHeight = document.body.scrollHeight;
 
-        if (scrollPosition + windowHeight >= documentHeight - 50) {
+    // Se sei in cima alla pagina, non attivare nessun link
+    if (scrollPosition < 100) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        mobileNavLinks.forEach(l => l.classList.remove('active'));
+        return;
+    }
+
+    if (scrollPosition + windowHeight >= documentHeight - 50) {
             navLinks.forEach(l => l.classList.remove('active'));
             mobileNavLinks.forEach(l => l.classList.remove('active'));
             navLinks[navLinks.length - 1].classList.add('active');
