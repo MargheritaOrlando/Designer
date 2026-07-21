@@ -1,5 +1,3 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Margherita Orlando - Game Designer</title> <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="styles
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -383,6 +381,31 @@ p, li, a, span, div {
           height: 100%;
           border-radius: 8px; /* Per arrotondare gli angoli */
         }
+        .video-placeholder {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 16px;
+          text-align: center;
+          background: #070f17;
+          color: #f3f4f6;
+          font-size: 15px;
+          line-height: 1.35;
+        }
+        .video-placeholder button {
+          background-color: #b45309;
+          color: #fff;
+          border: 1px solid #b45309;
+          border-radius: 4px;
+          padding: 8px 14px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .video-container.is-loaded .video-placeholder { display: none; }
         .nav-container {
             backdrop-filter: blur(10px);
             background-color: rgba(7, 15, 23, 0.85); /* #070f17 con 85% opacità */
@@ -1068,25 +1091,29 @@ document.addEventListener('DOMContentLoaded', function () {
                         <iframe 
                             width="100%" 
                             height="240"
-                            src="https://www.youtube.com/embed/LepEDOgw0Ec?si=lwvk8GK6WAFINvGe" 
+                            class="youtube-embed"
+                            data-src="https://www.youtube-nocookie.com/embed/LepEDOgw0Ec?si=lwvk8GK6WAFINvGe" 
                             title="YouTube video player" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen>
                         </iframe>
+                        <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
                     </div>
                     <div class="video-container" style="border: 1px solid #b45309; background-color: #070f17; display: flex; justify-content: center; align-items: center; width: 100%;">
                         <iframe 
                             width="100%" 
                             height="240"
-                            src="https://www.youtube.com/embed/_HNPT7efHq0?si=oilW8GFcmdFIuR_O" 
+                            class="youtube-embed"
+                            data-src="https://www.youtube-nocookie.com/embed/_HNPT7efHq0?si=oilW8GFcmdFIuR_O" 
                             title="YouTube video player" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             referrerpolicy="strict-origin-when-cross-origin" 
                             allowfullscreen>
                         </iframe>
+                        <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
                     </div>
                 </div>
             </div>
@@ -1179,13 +1206,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 <iframe 
                     width="100%" 
                     height="240"
-                    src="https://www.youtube.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
+                    class="youtube-embed"
+                    data-src="https://www.youtube-nocookie.com/embed/Y9hwpMiA2GI?si=mmt3FYFEPlPyQcXe"
                     title="YouTube video player"
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
                 </iframe>
+                <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
             </div>
             
             <!-- Second video directly below the first one -->
@@ -1193,13 +1222,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 <iframe 
                     width="100%" 
                     height="240"
-                    src="https://www.youtube.com/embed/XMuuHrSbPcs"
+                    class="youtube-embed"
+                    data-src="https://www.youtube-nocookie.com/embed/XMuuHrSbPcs"
                     title="YouTube video player"
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
                 </iframe>
+                <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
             </div>
         </div>
     </div>
@@ -1420,13 +1451,15 @@ document.addEventListener('DOMContentLoaded', function () {
         <iframe 
             width="560" 
             height="240" 
-            src="https://www.youtube.com/embed/p4vZIwktpGU?si=Bx2eKTNqA_TZy51r" 
+            class="youtube-embed"
+            data-src="https://www.youtube-nocookie.com/embed/p4vZIwktpGU?si=Bx2eKTNqA_TZy51r" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
         </iframe>
+        <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
     </div>
     
     <!-- Image container below video -->
@@ -1532,13 +1565,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 <iframe 
                     width="560" 
                     height="240" 
-                    src="https://www.youtube.com/embed/RDiwTvOuNYk?si=HPeGwqhK73R8NjBe" 
+                    class="youtube-embed"
+                    data-src="https://www.youtube-nocookie.com/embed/RDiwTvOuNYk?si=HPeGwqhK73R8NjBe" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerpolicy="strict-origin-when-cross-origin" 
                     allowfullscreen>
                 </iframe>
+                <div class="video-placeholder"><span>Per visualizzare questo video di YouTube, accetta i contenuti esterni.</span><button type="button" class="video-consent-button">Accetta e carica i video</button></div>
             </div>
             
              
@@ -2181,8 +2216,61 @@ document.addEventListener('DOMContentLoaded', function () {
    <!-- Footer -->
 <footer class="bg-gray-900 text-gray-600 py-4">
     <div class="container mx-auto px-2 text-center text-[6px]">
-        <p>Portfolio designed and developed by Margherita Orlando using GitHub Pages and Claude.ai.</p>
+        <p>Portfolio designed and developed by Margherita Orlando using GitHub Pages and Claude.ai. | <a href="privacy.html" style="color:#b45309; text-decoration:underline;">Privacy &amp; Cookie Policy</a> | <button type="button" id="cookie-preferences" style="color:#b45309; text-decoration:underline; background:transparent; border:0; padding:0; cursor:pointer; font:inherit;">Rivedi preferenze cookie</button></p>
     </div>
 </footer>
+
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="position:fixed; bottom:0; left:0; right:0; z-index:9999; background-color:#070f17; border-top:2px solid #b45309; padding:16px; display:none; box-shadow:0 -2px 10px rgba(0,0,0,0.5);">
+    <div style="max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px;">
+        <p style="color:#f3f4f6; font-size:14px; margin:0; flex:1; min-width:220px;">
+            I video di YouTube restano bloccati finché non scegli di accettare i contenuti esterni. Se accetti, YouTube può trattare dati e utilizzare cookie secondo le proprie informative. <a href="privacy.html" style="color:#b45309; text-decoration:underline;">Maggiori informazioni</a>
+        </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <button id="cookie-reject" type="button" style="background-color:transparent; color:#f3f4f6; border:1px solid #b45309; padding:8px 20px; border-radius:4px; font-weight:bold; cursor:pointer; white-space:nowrap;">Rifiuto</button>
+            <button id="cookie-accept" type="button" style="background-color:#b45309; color:white; border:1px solid #b45309; padding:8px 20px; border-radius:4px; font-weight:bold; cursor:pointer; white-space:nowrap;">Accetto</button>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('cookie-accept');
+    var rejectBtn = document.getElementById('cookie-reject');
+    var preferencesBtn = document.getElementById('cookie-preferences');
+
+    function loadYouTubeVideos() {
+        document.querySelectorAll('.youtube-embed').forEach(function (iframe) {
+            if (!iframe.getAttribute('src')) iframe.src = iframe.dataset.src;
+            iframe.closest('.video-container').classList.add('is-loaded');
+        });
+    }
+    function unloadYouTubeVideos() {
+        document.querySelectorAll('.youtube-embed').forEach(function (iframe) {
+            iframe.removeAttribute('src');
+            iframe.closest('.video-container').classList.remove('is-loaded');
+        });
+    }
+    function savePreference(preference) {
+        localStorage.setItem('youtubeConsent', preference);
+        banner.style.display = 'none';
+        if (preference === 'accepted') loadYouTubeVideos();
+        else unloadYouTubeVideos();
+    }
+    if (localStorage.getItem('youtubeConsent') === 'accepted') {
+        loadYouTubeVideos();
+    } else if (!localStorage.getItem('youtubeConsent')) {
+        banner.style.display = 'block';
+    }
+    acceptBtn.addEventListener('click', function () { savePreference('accepted'); });
+    rejectBtn.addEventListener('click', function () { savePreference('rejected'); });
+    preferencesBtn.addEventListener('click', function () { banner.style.display = 'block'; });
+    document.querySelectorAll('.video-consent-button').forEach(function (button) {
+        button.addEventListener('click', function () {
+            savePreference('accepted');
+        });
+    });
+});
+</script>
 </body>
 </html>
